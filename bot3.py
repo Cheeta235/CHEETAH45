@@ -120,7 +120,7 @@ def start(message):
 [ϟ] Condition: ON! ✅
 [ϟ] Type: Only-Vip-User
 ━━━━━━━━━━━━━━━━━━━
-[ϟ] Name: Braintree Auth 3
+[ϟ] Name: Stripe Auth 3
 [ϟ] Format: /b3 card|month|year|cvv
 [ϟ] Condition: ON! ✅
 [ϟ] Type: Only-Vip-User
@@ -207,7 +207,7 @@ def main(message):
 		keyboard = types.InlineKeyboardMarkup()
 		contact_button = types.InlineKeyboardButton(text=f"ϟ Braintree Auth 1 ϟ",callback_data='br')
 		sw = types.InlineKeyboardButton(text=f"ϟ Braintree Auth 2 ϟ️",callback_data='br2')
-		b3 = types.InlineKeyboardButton(text=f"ϟ Braintree Auth 3 ϟ️",callback_data='br3')
+		b3 = types.InlineKeyboardButton(text=f"ϟ Stripe Auth 3 ϟ️",callback_data='br3')
 		sa = types.InlineKeyboardButton(text=f"ϟ Braintree Auth 4 ϟ️",callback_data='br4')
 		m = types.InlineKeyboardButton(text=f"ϟ Moneris Cahrge 0.10$ ϟ️",callback_data='br4')
 		d = types.InlineKeyboardButton(text=f"ϟ Moneris Cahrge 0.10$ ϟ️",callback_data='br4')
