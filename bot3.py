@@ -19,7 +19,7 @@ import time
 from telebot import types
 
 stopuser = {}
-token = '7040333422:AAE_WUPYhjauw0VA5Ms7V5IA8OgtxjOCqv0'
+token = '7337962051:AAGxqUQWhPgq5KOr8cYYiUC32ACdj8AtXgA'
 bot=telebot.TeleBot(token,parse_mode="HTML")
 
 
@@ -900,7 +900,7 @@ def menu_callback(call):
         return  # إذا كان هناك فحص جاري، نخرج من الدالة ولا نبدأ فحص جديد
 
     def my_function():
-        gate = 'Braintree Auth 3'
+        gate = 'Stripe Auth 3'
         dd = 0
         live = 0
         cm = 0
