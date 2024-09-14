@@ -19,7 +19,7 @@ import time
 from telebot import types
 
 stopuser = {}
-token = '7337962051:AAGfuez9swJWXOjHYxbRoO_JSjk4MNxlbI0'
+token = '7337962051:AAHCUBsRaxcM-JXe9Y-ldeGrpzjkrtFc15k'
 bot=telebot.TeleBot(token,parse_mode="HTML")
 
 
