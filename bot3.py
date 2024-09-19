@@ -1151,7 +1151,7 @@ def menu_callbactok(call):
                     else:
                         dd += 1
                     
-                    time.sleep(5)
+                    time.sleep(7)
         except Exception as error:
             bot.send_message(admins[0], f'Error -> {error}')
         
