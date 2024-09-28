@@ -19,7 +19,7 @@ import time
 from telebot import types
 
 stopuser = {}
-token = '7337962051:AAGT8bdsIOrfOd-PbcjCjqwlP760SySPvDE'
+token = '7337962051:AAH98jqaok2mDr6J8FScCU-lYRhTscdhs4c'
 bot=telebot.TeleBot(token,parse_mode="HTML")
 
 
@@ -1144,8 +1144,7 @@ def menu_callbactok(call):
                         reply_markup=mes)
                                                 
                     user_status = get_user_status(call.from_user.id, admin)           
-                    msg = f'''<b>
-  - 🚀B3 AUTH(4) -
+                    msg = f'''<b>• 🚀B3 AUTH(4)-
 ┏━✨ CARD DETAILS ✨━
 ┣💳 Card: <code>{cc}</code>
 ┣📋 Status: {last} 🟢
@@ -2592,4 +2591,4 @@ while True:
 		bot.polling(none_stop=True)
 	except Exception as e:
 		print(f"حدث خطأ: {e}")
-		continue
+		continue''
