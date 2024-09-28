@@ -19,7 +19,7 @@ import time
 from telebot import types
 
 stopuser = {}
-token = '7337962051:AAG1tUBusx04akFsLw9yqziqFEO6hYjkLaw'
+token = '7283540458:AAEyweQI4z6RP1lV_p5_NdvL8hd721l4EIg'
 bot=telebot.TeleBot(token,parse_mode="HTML")
 
 
@@ -120,7 +120,7 @@ def start(message):
 [ϟ] Condition: ON! ✅
 [ϟ] Type: Only-Vip-User
 ━━━━━━━━━━━━━━━━━━━
-[ϟ] Name: Stripe Auth 3
+[ϟ] Name: Braintree Auth 3
 [ϟ] Format: /b3 card|month|year|cvv
 [ϟ] Condition: ON! ✅
 [ϟ] Type: Only-Vip-User
@@ -140,6 +140,7 @@ def start(message):
 [ϟ] Condition: ON! ✅
 [ϟ] Type: Free For All ✅
 ━━━━━━━━━━━━━━━━━━━
+  NOTE :- Only Braintree auth 4 WORKING
 ϟ - We will adding More Gates....</b>
 ''',reply_markup=keyboard)
 @bot.message_handler(content_types=["document"])
@@ -207,7 +208,7 @@ def main(message):
 		keyboard = types.InlineKeyboardMarkup()
 		contact_button = types.InlineKeyboardButton(text=f"ϟ Braintree Auth 1 ϟ",callback_data='br')
 		sw = types.InlineKeyboardButton(text=f"ϟ Braintree Auth 2 ϟ️",callback_data='br2')
-		b3 = types.InlineKeyboardButton(text=f"ϟ Stripe Auth 3 ϟ️",callback_data='br3')
+		b3 = types.InlineKeyboardButton(text=f"ϟ Braintree Auth 3 ϟ️",callback_data='br3')
 		sa = types.InlineKeyboardButton(text=f"ϟ Braintree Auth 4 ϟ️",callback_data='br4')
 		m = types.InlineKeyboardButton(text=f"ϟ Moneris Cahrge 0.10$ ϟ️",callback_data='br4')
 		d = types.InlineKeyboardButton(text=f"ϟ Moneris Cahrge 0.10$ ϟ️",callback_data='br4')
@@ -244,9 +245,10 @@ def dato(zh):
 		bank=api_url["bank"]
 		country_name=api_url["country_name"]
 		country_flag=api_url["country_flag"]
-		mn = f'''ϟ BIN Info -> {brand} - {card_type} - {level}
-ϟ Bank -> {bank} - {country_flag}
-ϟ Country -> {country_name} [ {country_flag} ]'''
+		mn = f'''┏━🔎 BIN INFO 🔎━
+┣🔢 Bin: {brand} - {card_type} - {level}
+┣🏛️ Bank: {bank} 🏛
+┣🌍 Country: {country_name} [ {country_flag} ]'''
 		return mn
 	except Exception as e:
 		print(e)
@@ -585,7 +587,7 @@ def menu_callback(call):
                 for cc in lines:
                     if stopuser[id]['status'] == 'stop':
                         bot.send_message(chat_id=id, text='- Done Stop Check Cards 📣⚡')
-                        stopuser[id]['status'] = 'stopped'  # تحرير حالة الفحص
+                        stopuser[id]['status'] = 'stopped'  #ير حالة الفحص
                         return
                     start_time = time.time()
                     try:
@@ -831,22 +833,13 @@ def stop_check(call):
 
 
 
-
+def get_user_status(user_id, admin):
+    if user_id == admin:
+        return "[Malik]"
+    return "[VIP]"
 
 
 	
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -900,7 +893,7 @@ def menu_callback(call):
         return  # إذا كان هناك فحص جاري، نخرج من الدالة ولا نبدأ فحص جديد
 
     def my_function():
-        gate = 'Stripe Auth 3'
+        gate = 'Braintree Auth 3'
         dd = 0
         live = 0
         cm = 0
@@ -1011,7 +1004,23 @@ def stop_check(call):
 
 
 
+def get_user_info(user_id):
+    try:
+        chat = bot.get_chat(user_id)
+        user_name = chat.first_name
+        user_username = chat.username
+        return user_name, user_username
+    except Exception as e:
+        m = (f"Error retrieving user info for ID {user_id}: {e}")
+        return 'Unknown', 'Unknown'
 
+def notify_admins(user_id, user_data):
+    user_name, user_username = get_user_info(user_id)
+
+def get_user_status(user_id, admin):
+    if user_id == admin:
+        return "[Malik]"
+    return "[VIP]"
 	
 	
 	
@@ -1063,7 +1072,7 @@ def menu_callbactok(call):
             chat_id=call.message.chat.id,
             text="- You Are Already Checking A Combo. 🔄 Please Wait Until It Finishes Or Stop It Manually."
         )
-        return  # إذا كان هناك فحص جاري، نخرج من الدالة ولا نبدأ فحص جديد
+        return  # إذا كان هناك فحص جاري، نخرج من الدالة ولا نبدأ فحص جديد    
 
     def my_function():
         gate = 'Braintree Auth 4'
@@ -1133,25 +1142,52 @@ def menu_callbactok(call):
 - Gate -> {gate} 💫
 - Programmer -> @cheetax1 </b>''', 
                         reply_markup=mes)
-                    
-                    msg = f'''<b>• Approved ✅
-
-ϟ Card ->  <code>{cc}</code>
-ϟ Status -> {last}
-ϟ Gate -> {gate}
-
+                                                
+                    user_status = get_user_status(call.from_user.id, admin)           
+                    msg = f'''<b>
+  - 🚀B3 AUTH(4) -
+┏━✨ CARD DETAILS ✨━
+┣💳 Card: <code>{cc}</code>
+┣📋 Status: {last} 🟢
+┣💬 Response: Auth Done 0.05$ ✅
+┣🌐 Gate: Braintree Auth(4)
+－－－－－－－－－－－－－－－－
 {str(dato(cc[:6]))}
-
-ϟ Time -> {"{:.1f}".format(execution_time)} Seconds. 
-ϟ - Programmer -> @cheetax1⚡</b>'''
-                    
-                    if "Funds" in last or 'Invalid postal' in last or 'avs' in last or 'added' in last or 'Duplicate' in last or 'Approved' in last or 'CVV' in last:
+－－－－－－－－－－－－－－－－
+┏━✅ SUMMARY ✅━
+┣🔗 Proxy: Live! ✅
+┣⏳ Time Taken: {"{:.1f}".format(execution_time)} Seconds. 
+┣🔌 Api Status: Active 🔥
+┣👤 Checked by: @{call.from_user.username}{user_status}
+┣🤖 Bot by: <a href="https://telegram.dog/cheetax1">CHEETAH</a></b>'''
+                  
+                    cvc = f'''<b>• Ccn Card ☑️        
+┏━✨ CARD DETAILS ✨━
+┣💳 Card: <code>{cc}</code>
+┣📋 Status: {last} 🟢
+┣💬 Response: Auth Done 0.05$ ✅
+┣🌐 Gate: Braintree Auth(4)
+－－－－－－－－－－－－－－－－
+ {str(dato(cc[:6]))}
+－－－－－－－－－－－－－－－－
+┏━✅ SUMMARY ✅━
+┣🔗 Proxy: Live! ✅
+┣⏳ Time Taken: {"{:.1f}".format(execution_time)} Seconds. 
+┣🔌 Api Status: Active 🔥
+┣👤 Checked by: @{call.from_user.username}{user_status}
+┣🤖 Bot by: <a href="https://telegram.dog/cheetax1">CHEETAH</a></b>'''
+                   
+                    if "Funds" in last or 'Invalid postal' in last or 'avs' in last or 'added' in last or 'Duplicate' in last or 'Approved' in last or 'cheeta' in last:
                         live += 1
                         bot.send_message(call.from_user.id, msg)
+                    elif 'CVV' in last:
+                    	live += 1
+                    	bot.send_message(call.from_user.id, cvc)
+                    
                     else:
                         dd += 1
                     
-                    time.sleep(7)
+                    time.sleep(5)
         except Exception as error:
             bot.send_message(admins[0], f'Error -> {error}')
         
@@ -1306,16 +1342,20 @@ def respond_to_vhk(message):
 ϟ Time -> {"{:.1f}".format(execution_time)} Seconds. 
 ϟ - Programmer -> @cheetax1⚡</b>'''
 
-        ok = f'''<b>• Approved ✅
-
-ϟ Card ->  <code>{cc}</code>
-ϟ Status -> {last}
-ϟ Gate -> Braintree Auth 1
-
-{str(dato(cc[:6]))}
-
-ϟ Time -> {"{:.1f}".format(execution_time)} Seconds. 
-ϟ - Programmer -> @cheetax1⚡</b>'''
+        ok = f'''<b>•┏━✨ CARD DETAILS ✨━
+┣💳 Card: <code>{cc}</code>
+┣📋 Status: {last} 🟢
+┣💬 Response: Auth Done 0.05$ ✅
+┣🌐 Gate: Braintree Auth(4)
+－－－－－－－－－－－－－－－－
+ {str(dato(cc[:6]))}
+－－－－－－－－－－－－－－－－
+┏━✅ SUMMARY ✅━
+┣🔗 Proxy: Live! ✅
+┣⏳ Time Taken: {"{:.1f}".format(execution_time)} Seconds. 
+┣🔌 Api Status: Active 🔥
+┣👤 Checked by: @{message.from_user.username}{user_status}
+┣🤖 Bot by: <a href="https://telegram.dog/cheetax1">CHEETAH</a></b>'''
 
         cvc = f'''<b>• Cvv Card ☑️        
 --------------------------------------------
@@ -1589,9 +1629,23 @@ Programmer - @cheetax1''')
 
 
 
+def get_user_info(user_id):
+    try:
+        chat = bot.get_chat(user_id)
+        user_name = chat.first_name
+        user_username = chat.username
+        return user_name, user_username
+    except Exception as e:
+        m = (f"Error retrieving user info for ID {user_id}: {e}")
+        return 'Unknown', 'Unknown'
 
+def notify_admins(user_id, user_data):
+    user_name, user_username = get_user_info(user_id)
 
-
+def get_user_status(user_id, admin):
+    if user_id == admin:
+        return "[Malik]"
+    return "[VIP]"
 
 
 
@@ -1658,39 +1712,60 @@ def respond_to_vhk(message):
             last = 'Gateway Error ❌'
         end_time = time.time()
         execution_time = end_time - start_time
-
+        
+        user_status = get_user_status(message.from_user.id, admin)
         dec = f'''<b>• Declined ❌
 
-ϟ Card ->  <code>{cc}</code>
-ϟ Status -> {last}
-ϟ Gate ->  Braintree Auth 4
+┏━✨ CARD DETAILS ✨━
+┣💳 Card: <code>{cc}</code>
+┣📋 Status: {last} 🟢
+┣💬 Response: Auth Done 0.05$ ✅
+┣🌐 Gate: Braintree Auth(4)
+－－－－－－－－－－－－－－－－
+ {str(dato(cc[:6]))}
+－－－－－－－－－－－－－－－－
+┏━✅ SUMMARY ✅━
+┣🔗 Proxy: Live! ✅
+┣⏳ Time Taken: {"{:.1f}".format(execution_time)} Seconds. 
+┣🔌 Api Status: Active 🔥
+┣👤 Checked by: @{message.from_user.username}{user_status}
+┣🤖 Bot by: <a href="https://telegram.dog/cheetax1">CHEETAH</a></b>'''
+             
+        ok = f'''<b>🚀B3 AUTH(4) 
 
-{str(dato(cc[:6]))}
+┏━✨ CARD DETAILS ✨━
+┣💳 Card: <code>{cc}</code>
+┣📋 Status: {last} 🟢
+┣💬 Response: Auth Done 0.05$ ✅
+┣🌐 Gate: Braintree Auth(4)
+－－－－－－－－－－－－－－－－
+ {str(dato(cc[:6]))}
+－－－－－－－－－－－－－－－－
+┏━✅ SUMMARY ✅━
+┣🔗 Proxy: Live! ✅
+┣⏳ Time Taken: {"{:.1f}".format(execution_time)} Seconds. 
+┣🔌 Api Status: Active 🔥
+┣👤 Checked by: @{message.from_user.username}{user_status}
+┣🤖 Bot by: <a href="https://telegram.dog/cheetax1">CHEETAH</a></b>'''
+        
+         # Send message with result
+        bot.edit_message_text(ok, message.chat.id, ko, parse_mode='html')
 
-ϟ Time -> {"{:.1f}".format(execution_time)} Seconds. 
-ϟ - Programmer -> @cheetax1⚡</b>'''
-
-        ok = f'''<b>• Approved ✅
-
-ϟ Card ->  <code>{cc}</code>
-ϟ Status -> {last}
-ϟ Gate -> Braintree Auth 4
-
-{str(dato(cc[:6]))}
-
-ϟ Time -> {"{:.1f}".format(execution_time)} Seconds. 
-ϟ - Programmer -> @cheetax1⚡</b>'''
-
-        cvc = f'''<b>• Cvv Card ☑️        
---------------------------------------------
-- Card -> <code>{cc}</code>
-- Message -> {last}
-- GateWay -> {gate}
---------------------------------------------
-{str(dato(cc[:6]))}
-- Process Time -> {"{:.1f}".format(execution_time)} Seconds. 
---------------------------------------------
-- Programmer • @cheetax1</b>'''
+        cvc = f'''<b>• Ccn Card ☑️        
+┏━✨ CARD DETAILS ✨━
+┣💳 Card: <code>{cc}</code>
+┣📋 Status: {last} 🟢
+┣💬 Response: Ccn Done 0.05$ ✅
+┣🌐 Gate: Braintree Auth(4)
+－－－－－－－－－－－－－－－－
+ {str(dato(cc[:6]))}
+－－－－－－－－－－－－－－－－
+┏━✅ SUMMARY ✅━
+┣🔗 Proxy: Live! ✅
+┣⏳ Time Taken: {"{:.1f}".format(execution_time)} Seconds. 
+┣🔌 Api Status: Active 🔥
+┣👤 Checked by: @{message.from_user.username}{user_status}
+┣🤖 Bot by: <a href="https://telegram.dog/cheetax1">CHEETAH</a></b>'''
 
         if 'CVV' in last or 'CCN' in last:
             bot.edit_message_text(text=cvc, chat_id=message.chat.id, message_id=ko)
@@ -2288,11 +2363,20 @@ def adodre(message):
 def respondn_to_vhk(message):
  bot.reply_to(message,'''ا
  Bot Pro CC Checker Bot 🛒
+Note Only One gate is working Braintree auth 4 
  
- NOT FOR SELL 
-• • We Accept All Payment Methods in World ✅
+ SELL 
+• • For Upi Direct Purchase ib :- @Cheetax1
+    For Btc,Ltc,usdt ib :- @CosmicRay666 ✅
+    
+    price :-
+        Upi -- 1day :- 75rs
+                     7days:- 480rs
+        Usdt --- 1day :- 1$
+                 ----7days 6$
+  
 • For Subscribe & inquiry - 🛩
-🖱👼@cheetax1👼''')
+@cheetax1''')
 
 
 
