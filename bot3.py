@@ -19,7 +19,7 @@ import time
 from telebot import types
 
 stopuser = {}
-token = '7337962051:AAFHo86BffOlE05DArztyjPYSyWWXjtFLgc'
+token = '7337962051:AAENxwx8oBRPVbHmvWl2i97lzsJgz9tdFGs'
 bot=telebot.TeleBot(token,parse_mode="HTML")
 
 
@@ -880,7 +880,7 @@ def handle_admin_commands(message):
     global check_enabled_br3
     if str(message.from_user.id) in admins:
         check_enabled_br3 = True
-        bot.send_message(chat_id=message.chat.id, text='- Braintree Auth 3 Check has been re-enabled. ✅ Users can now start the check.')
+        bot.send_message(chat_id=message.chat.id, text='- Stripe Auth 3 Check has been re-enabled. ✅ Users can now start the check.')
     else:
         bot.send_message(chat_id=message.chat.id, text='- You are not the owner🤍')
 
@@ -984,10 +984,27 @@ def menu_callback(call):
 ┣🔌 Api Status: Active 🔥
 ┣👤 Checked by: @{call.from_user.username}{user_status}
 ┣🤖 Bot by: <a href="https://telegram.dog/cheetax1">CHEETAH</a></b>'''
-
+                    cvc = f'''<b>• Ccn Card ☑️        
+┏━✨ CARD DETAILS ✨━
+┣💳 Card:<code>{cc}</code>
+┣📋 Status: {last} 🟢
+┣💬 Response: Auth Done 0.05$ ✅
+┣🌐 Gate: Braintree Auth(4)
+－－－－－－－－－－－－－－－－
+ {str(dato(cc[:6]))}
+－－－－－－－－－－－－－－－－
+┏━✅ SUMMARY ✅━
+┣🔗 Proxy: Live! ✅
+┣⏳ Time Taken: {"{:.1f}".format(execution_time)} Seconds. 
+┣🔌 Api Status: Active 🔥
+┣👤 Checked by: @{call.from_user.username}{user_status}
+┣🤖 Bot by: <a href="https://telegram.dog/cheetax1">CHEETAH</a></b>'''
                     if "Funds" in last or 'Invalid postal' in last or 'success' in last or 'added' in last or 'Duplicate' in last or 'Approved' in last or 'CVV' in last:
                         live += 1
                         bot.send_message(call.from_user.id, msg)
+                    elif 'code' in last:
+                    	live += 1
+                    	bot.send_message(call.from_user.id, cvc)
                     else:
                         dd += 1
 
@@ -1557,7 +1574,7 @@ def handle_admin_commands(message):
     else:
         bot.send_message(chat_id=message.chat.id, text='- You are not the owner🤍')
 
-@bot.message_handler(func=lambda message: message.text.lower().startswith('.b3') or message.text.lower().startswith('/b3'))
+@bot.message_handler(func=lambda message: message.text.lower().startswith('.auth') or message.text.lower().startswith('/auth'))
 def respond_to_vhk(message):
     global check_enabled_br3
     user_id = message.chat.id
@@ -1596,7 +1613,7 @@ def respond_to_vhk(message):
 
 ϟ Card ->  <code>{cc}</code>
 ϟ Status -> {last}
-ϟ Gate ->  Braintree Auth 3
+ϟ Gate ->  Stripe Auth 3
 
 {str(dato(cc[:6]))}
 
@@ -1607,14 +1624,14 @@ def respond_to_vhk(message):
 
 ϟ Card ->  <code>{cc}</code>
 ϟ Status -> {last}
-ϟ Gate -> Braintree Auth 3
+ϟ Gate -> Stripe Auth 3
 
 {str(dato(cc[:6]))}
 
 ϟ Time -> {"{:.1f}".format(execution_time)} Seconds. 
 ϟ - Programmer -> @cheetax1⚡</b>'''
 
-        cvc = f'''<b>• Cvv Card ☑️        
+        cvc = f'''<b>• Ccn Live ☑️        
 --------------------------------------------
 - Card -> <code>{cc}</code>
 - Message -> {last}
@@ -1625,7 +1642,7 @@ def respond_to_vhk(message):
 --------------------------------------------
 - Programmer • @cheetax1</b>'''
 
-        if 'CVV' in last or 'CCN' in last:
+        if 'code' in last or 'CCN' in last:
             bot.edit_message_text(text=cvc, chat_id=message.chat.id, message_id=ko)
         elif "Funds" in last or 'Invalid postal' in last or 'Charge 0.50$ ✅' in last or 'added' in last or 'Duplicate' in last or 'Approved' in last:
             bot.edit_message_text(text=ok, chat_id=message.chat.id, message_id=ko)
