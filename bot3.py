@@ -19,7 +19,7 @@ import time
 from telebot import types
 
 stopuser = {}
-token = '7337962051:AAH98jqaok2mDr6J8FScCU-lYRhTscdhs4c'
+token = '7283540458:AAEyweQI4z6RP1lV_p5_NdvL8hd721l4EIg'
 bot=telebot.TeleBot(token,parse_mode="HTML")
 
 
@@ -112,16 +112,16 @@ def start(message):
 ━━━━━━━━━━━━━━━━━━━
 [ϟ] Name: Braintree Auth 1
 [ϟ] Format: /chk card|month|year|cvv
-[ϟ] Condition: ON! ✅
+[ϟ] Condition: OFF! 
 [ϟ] Type: Only-Vip-User
 ━━━━━━━━━━━━━━━━━━━
 [ϟ] Name: Braintree Auth 2
 [ϟ] Format: /cc card|month|year|cvv
-[ϟ] Condition: ON! ✅
+[ϟ] Condition: OFF! 
 [ϟ] Type: Only-Vip-User
 ━━━━━━━━━━━━━━━━━━━
-[ϟ] Name: Braintree Auth 3
-[ϟ] Format: /b3 card|month|year|cvv
+[ϟ] Name: Stripe Auth 3
+[ϟ] Format: /auth card|month|year|cvv
 [ϟ] Condition: ON! ✅
 [ϟ] Type: Only-Vip-User
 ━━━━━━━━━━━━━━━━━━━
@@ -208,7 +208,7 @@ def main(message):
 		keyboard = types.InlineKeyboardMarkup()
 		contact_button = types.InlineKeyboardButton(text=f"ϟ Braintree Auth 1 ϟ",callback_data='br')
 		sw = types.InlineKeyboardButton(text=f"ϟ Braintree Auth 2 ϟ️",callback_data='br2')
-		b3 = types.InlineKeyboardButton(text=f"ϟ Braintree Auth 3 ϟ️",callback_data='br3')
+		b3 = types.InlineKeyboardButton(text=f"ϟ Stripe Auth 3 ϟ️",callback_data='br3')
 		sa = types.InlineKeyboardButton(text=f"ϟ Braintree Auth 4 ϟ️",callback_data='br4')
 		m = types.InlineKeyboardButton(text=f"ϟ Moneris Cahrge 0.10$ ϟ️",callback_data='br4')
 		d = types.InlineKeyboardButton(text=f"ϟ Moneris Cahrge 0.10$ ϟ️",callback_data='br4')
@@ -828,10 +828,18 @@ def stop_check(call):
 
 
 
+def get_user_info(user_id):
+    try:
+        chat = bot.get_chat(user_id)
+        user_name = chat.first_name
+        user_username = chat.username
+        return user_name, user_username
+    except Exception as e:
+        m = (f"Error retrieving user info for ID {user_id}: {e}")
+        return 'Unknown', 'Unknown'
 
-
-
-
+def notify_admins(user_id, user_data):
+    user_name, user_username = get_user_info(user_id)
 
 def get_user_status(user_id, admin):
     if user_id == admin:
@@ -863,7 +871,7 @@ def handle_admin_commands(message):
     global check_enabled_br3
     if str(message.from_user.id) in admins:
         check_enabled_br3 = False
-        bot.send_message(chat_id=message.chat.id, text='- Braintree Auth 3 Check has been disabled. 🔒 No users can start the check until it is re-enabled.')
+        bot.send_message(chat_id=message.chat.id, text='- Stripe Auth 3 Check has been disabled. 🔒 No users can start the check until it is re-enabled.')
     else:
         bot.send_message(chat_id=message.chat.id, text='- You are not the owner🤍')
 
@@ -893,7 +901,7 @@ def menu_callback(call):
         return  # إذا كان هناك فحص جاري، نخرج من الدالة ولا نبدأ فحص جديد
 
     def my_function():
-        gate = 'Braintree Auth 3'
+        gate = 'Stripe Auth 3'
         dd = 0
         live = 0
         cm = 0
@@ -960,19 +968,24 @@ def menu_callback(call):
 - Gate -> {gate} 💫
 - Programmer -> @cheetax1 </b>''', 
                         reply_markup=mes)
-
-                    msg = f'''<b>• Approved ✅
-
-ϟ Card ->  <code>{cc}</code>
-ϟ Status -> {last}
-ϟ Gate -> {gate}
-
+                    user_status = get_user_status(call.from_user.id, admin)
+                    msg = f'''<b>• 🚀Stripe Auth(3)-
+┏━✨ CARD DETAILS ✨━
+┣💳 Card:<code>{cc}</code>
+┣📋 Status: {last} 🟢
+┣💬 Response: Auth Done ✅
+┣🌐 Gate: Stripe Auth(3)
+－－－－－－－－－－－－－－－－
 {str(dato(cc[:6]))}
+－－－－－－－－－－－－－－－－
+┏━✅ SUMMARY ✅━
+┣🔗 Proxy: Live! ✅
+┣⏳ Time Taken: {"{:.1f}".format(execution_time)} Seconds. 
+┣🔌 Api Status: Active 🔥
+┣👤 Checked by: @{call.from_user.username}{user_status}
+┣🤖 Bot by: <a href="https://telegram.dog/cheetax1">CHEETAH</a></b>'''
 
-ϟ Time -> {"{:.1f}".format(execution_time)} Seconds. 
-ϟ - Programmer -> @cheetax1⚡</b>'''
-
-                    if "Funds" in last or 'Invalid postal' in last or 'avs' in last or 'added' in last or 'Duplicate' in last or 'Approved' in last or 'CVV' in last:
+                    if "Funds" in last or 'Invalid postal' in last or 'success' in last or 'added' in last or 'Duplicate' in last or 'Approved' in last or 'CVV' in last:
                         live += 1
                         bot.send_message(call.from_user.id, msg)
                     else:
@@ -1125,7 +1138,7 @@ def menu_callbactok(call):
                     
                     print(last)
                     mes = types.InlineKeyboardMarkup(row_width=1)
-                    cm1 = types.InlineKeyboardButton(f"- 𝘾𝘾 • {cc}", callback_data='u8')
+                    cm1 = types.InlineKeyboardButton(f"- 𝘾𝘾 •{cc}", callback_data='u8')
                     status = types.InlineKeyboardButton(f"- 𝙎𝙩𝙖𝙩𝙪𝙨 • {last}", callback_data='u8')
                     cm3 = types.InlineKeyboardButton(f"- 𝗔𝗣𝗣𝗥𝗢𝗩𝗘𝗗 !✅ • {live}", callback_data='x')
                     cm4 = types.InlineKeyboardButton(f"- 𝗗𝗘𝗖𝗜𝗡𝗘𝗗 !❌ • {dd}", callback_data='x')
@@ -1146,7 +1159,7 @@ def menu_callbactok(call):
                     user_status = get_user_status(call.from_user.id, admin)           
                     msg = f'''<b>• 🚀B3 AUTH(4)-
 ┏━✨ CARD DETAILS ✨━
-┣💳 Card: <code>{cc}</code>
+┣💳 Card:<code>{cc}</code>
 ┣📋 Status: {last} 🟢
 ┣💬 Response: Auth Done 0.05$ ✅
 ┣🌐 Gate: Braintree Auth(4)
@@ -1162,7 +1175,7 @@ def menu_callbactok(call):
                   
                     cvc = f'''<b>• Ccn Card ☑️        
 ┏━✨ CARD DETAILS ✨━
-┣💳 Card: <code>{cc}</code>
+┣💳 Card:<code>{cc}</code>
 ┣📋 Status: {last} 🟢
 ┣💬 Response: Auth Done 0.05$ ✅
 ┣🌐 Gate: Braintree Auth(4)
@@ -1186,7 +1199,7 @@ def menu_callbactok(call):
                     else:
                         dd += 1
                     
-                    time.sleep(5)
+                    time.sleep(8)
         except Exception as error:
             bot.send_message(admins[0], f'Error -> {error}')
         
@@ -1568,8 +1581,8 @@ def respond_to_vhk(message):
     command_usage[user_id] = {'last_time': current_time}
 
     if check_user_plan(user_id):
-        cc = message.text.replace('.b3 ', '').replace('/b3 ', '')
-        gate='Braintree Auth 3'
+        cc = message.text.replace('.auth ', '').replace('/auth ', '')
+        gate='Stripe Auth 3'
         ko = bot.reply_to(message, '- Please Wait Checking your Card...⌛').message_id
         start_time = time.time()
         try:
