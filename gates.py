@@ -437,7 +437,7 @@ def Tele3(ccx):
     }
     try:
         response = r.post('https://aptekaleki24.co.uk/', params=params, cookies=r.cookies, headers=headers, data=data)
-        i = (response.json())
+        i = (response.json()['error']['message'])
         return i
     except:
         print(response.json())
