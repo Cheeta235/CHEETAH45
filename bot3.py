@@ -19,7 +19,7 @@ import time
 from telebot import types
 
 stopuser = {}
-token = '7337962051:AAENxwx8oBRPVbHmvWl2i97lzsJgz9tdFGs'
+token = '7337962051:AAGGryHJUb40enwgEXmPV5VnmIBtET_OHeM'
 bot=telebot.TeleBot(token,parse_mode="HTML")
 
 
@@ -1002,7 +1002,7 @@ def menu_callback(call):
                     if "Funds" in last or 'Invalid postal' in last or 'success' in last or 'added' in last or 'Duplicate' in last or 'Approved' in last or 'CVV' in last:
                         live += 1
                         bot.send_message(call.from_user.id, msg)
-                    elif 'code' in last:
+                    elif 'security' in last:
                     	live += 1
                     	bot.send_message(call.from_user.id, cvc)
                     else:
@@ -1176,7 +1176,7 @@ def menu_callbactok(call):
                     user_status = get_user_status(call.from_user.id, admin)           
                     msg = f'''<b>• 🚀B3 AUTH(4)-
 ┏━✨ CARD DETAILS ✨━
-┣💳 Card:<code>{cc}</code>
+┣💳 Card: <code>{cc}</code>
 ┣📋 Status: {last} 🟢
 ┣💬 Response: Auth Done 0.05$ ✅
 ┣🌐 Gate: Braintree Auth(4)
@@ -1192,7 +1192,7 @@ def menu_callbactok(call):
                   
                     cvc = f'''<b>• Ccn Card ☑️        
 ┏━✨ CARD DETAILS ✨━
-┣💳 Card:<code>{cc}</code>
+┣💳 Card: <code>{cc}</code>
 ┣📋 Status: {last} 🟢
 ┣💬 Response: Auth Done 0.05$ ✅
 ┣🌐 Gate: Braintree Auth(4)
@@ -1216,7 +1216,7 @@ def menu_callbactok(call):
                     else:
                         dd += 1
                     
-                    time.sleep(8)
+                    time.sleep(12)
         except Exception as error:
             bot.send_message(admins[0], f'Error -> {error}')
         
